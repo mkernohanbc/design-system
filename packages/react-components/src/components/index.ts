@@ -6,6 +6,7 @@ export { default as ButtonGroup } from "./ButtonGroup";
 export { default as Checkbox } from "./Checkbox";
 export { default as CheckboxGroup } from "./CheckboxGroup";
 export { default as Dialog, DialogTrigger } from "./Dialog";
+export { default as Divider } from "./Divider";
 export { default as Footer, FooterLinks } from "./Footer";
 export { default as Form } from "./Form";
 export { default as Header } from "./Header";
