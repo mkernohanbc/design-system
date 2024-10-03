@@ -5,7 +5,13 @@
     var(--surface-color-border-default);
 }
 
-/* Dashed orientation */
+/* Vertical orientation */
+.bcds-Divider.vertical {
+  transform: rotate(90deg);
+  height: 100%;
+}
+
+/* Dashed style */
 .bcds-Divider.dashed {
   border: var(--layout-border-width-small) dashed
     var(--surface-color-border-default);
