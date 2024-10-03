@@ -1,9 +1,10 @@
 import "./Divider.css";
 
 export interface DividerProps {
-  orientation?: "horizontal" | "vertical" | undefined;
+  /* Set divider to use dashed style instead of a solid line */
+  isDashed: boolean;
 }
 
-export default function Divider({ orientation = "horizontal" }: DividerProps) {
-  return <hr className={`bcds-Divider ${orientation}`} />;
+export default function Divider({ isDashed = false, ...props }) {
+  return <hr className={`bcds-Divider ${isDashed && "dashed"}`} {...props} />;
 }

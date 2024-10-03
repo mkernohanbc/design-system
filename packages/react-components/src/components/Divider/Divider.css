@@ -1,10 +1,12 @@
 .bcds-Divider {
+  color: var(--surface-color-border-default);
+  margin: var(--layout-margin-medium);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
 }
 
-/* Horizontal orientation */
-.bcds-Divider.horizontal {
-}
-
-/* Vertical orientation */
-.bcds-Divider.vertical {
+/* Dashed orientation */
+.bcds-Divider.dashed {
+  border: var(--layout-border-width-small) dashed
+    var(--surface-color-border-default);
 }

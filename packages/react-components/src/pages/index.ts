@@ -1,6 +1,7 @@
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
 import CheckboxGroupPage from "./CheckboxGroup";
+import DividerPage from "./Divider";
 import InlineAlertPage from "./InlineAlert";
 import ModalDialogPage from "./ModalDialog";
 import RadioGroupPage from "./RadioGroup";
@@ -15,6 +16,7 @@ export {
   ButtonPage,
   ButtonGroupPage,
   CheckboxGroupPage,
+  DividerPage,
   InlineAlertPage,
   ModalDialogPage,
   RadioGroupPage,
