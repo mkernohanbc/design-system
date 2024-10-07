@@ -7,8 +7,8 @@
 
 /* Vertical orientation */
 .bcds-Divider.vertical {
-  transform: rotate(90deg);
-  height: 100%;
+  height: auto;
+  margin: var(--layout-margin-none) var(--layout-margin-medium);
 }
 
 /* Dashed style */
