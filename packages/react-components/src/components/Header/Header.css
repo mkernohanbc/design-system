@@ -67,3 +67,8 @@
   min-width: 129px;
   width: 129px;
 }
+
+/* Dark mode */
+.bcds-header.dark {
+  background-color: var(--theme-gray-110);
+}

@@ -1,6 +1,7 @@
 import { cloneElement, PropsWithChildren } from "react";
 
 import SvgBcLogo from "../Icons/SvgBcLogo";
+import SvgBcLogoInvert from "../Icons/SvgBcLogoInvert";
 
 import "./Header.css";
 
@@ -29,24 +30,39 @@ export interface HeaderProps {
    * Desired element that renders the `title` string. Defaults to `<span>`.
    */
   titleElement?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span" | "p";
+  /**
+   * Toggle between default and dark colour schemes
+   */
+  colorScheme?: "light" | "dark";
+  logoImageDarkMode?: JSX.Element;
 }
 
 export default function Header({
   children,
   logoLinkElement,
   logoImage = <SvgBcLogo id="bcgov-logo-header" />,
+  logoImageDarkMode = <SvgBcLogoInvert id="bcgov-logo-header" />,
   skipLinks,
   title = "",
   titleElement = "span",
+  colorScheme = "light",
 }: PropsWithChildren<HeaderProps>) {
   function getLogo() {
     if (!logoLinkElement)
-      return (
-        <a href="/" title="Government of British Columbia">
-          {logoImage}
-        </a>
-      );
-
+      switch (colorScheme) {
+        case "light":
+          return (
+            <a href="/" title="Government of British Columbia">
+              {logoImage}
+            </a>
+          );
+        case "dark":
+          return (
+            <a href="/" title="Government of British Columbia">
+              {logoImageDarkMode}
+            </a>
+          );
+      }
     return cloneElement(logoLinkElement, { children: logoImage });
   }
 
@@ -72,7 +88,7 @@ export default function Header({
   }
 
   return (
-    <header className="bcds-header">
+    <header className={`bcds-header ${colorScheme}`}>
       <div className="bcds-header--container">
         {getLogo()}
         {skipLinks && (
