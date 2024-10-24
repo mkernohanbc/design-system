@@ -25,6 +25,13 @@ const preview: Preview = {
         order: ["Introduction", "Changelog"],
       },
     },
+    backgrounds: {
+      default: "Light",
+      values: [
+        { name: "Light", value: "#FFFFFF" },
+        { name: "Dark", value: "#252423" },
+      ],
+    },
   },
 };
 

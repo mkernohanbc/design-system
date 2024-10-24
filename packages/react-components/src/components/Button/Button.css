@@ -117,3 +117,23 @@
 .bcds-react-aria-Button.link[data-disabled] {
   color: var(--typography-color-disabled);
 }
+
+/* Dark mode */
+
+.bcds-react-aria-Button.primary.dark {
+  background: var(--surface-color-primary-button-default);
+  color: var(--icons-color-primary-invert);
+}
+.bcds-react-aria-Button.primary.dark.danger {
+  background-color: var(--surface-color-primary-danger-button-default);
+}
+.bcds-react-aria-Button.primary.dark[data-disabled] {
+  background-color: var(--surface-color-primary-danger-button-disabled);
+  color: var(--typography-color-disabled);
+}
+.bcds-react-aria-Button.primary.dark[data-hovered] {
+  background-color: var(--surface-color-primary-button-hover);
+}
+.bcds-react-aria-Button.primary.danger.dark[data-hovered] {
+  background-color: var(--surface-color-primary-danger-button-hover);
+}

@@ -22,6 +22,10 @@ export interface ButtonProps extends ReactAriaButtonProps {
    * If true, renders a square button intended for a single icon.
    */
   isIconButton?: boolean;
+  /**
+   * Toggle between default (light) colour scheme and dark mode
+   */
+  colorScheme?: "light" | "dark";
 }
 
 export default function Button({
@@ -29,11 +33,12 @@ export default function Button({
   variant = "primary",
   danger = false,
   isIconButton = false,
+  colorScheme = "light",
   ...props
 }: ButtonProps) {
   return (
     <ReactAriaButton
-      className={`bcds-react-aria-Button ${size} ${variant} ${
+      className={`bcds-react-aria-Button ${size} ${variant} ${colorScheme} ${
         danger ? "danger" : ""
       } ${isIconButton ? "icon" : ""}`}
       {...props}

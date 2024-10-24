@@ -36,6 +36,11 @@ const meta = {
       control: "boolean",
       description: "Is the button a square button with only an icon inside",
     },
+    colorScheme: {
+      control: { type: "radio" },
+      options: ["light", "dark"],
+      description: "Toggles between light and dark modes",
+    },
   },
 } satisfies Meta<typeof Button>;
 
@@ -51,6 +56,7 @@ export const ButtonTemplate: Story = {
     danger: false,
     isDisabled: false,
     isIconButton: false,
+    colorScheme: "light",
   },
   render: ({ ...args }: ButtonProps) => <Button {...args} />,
 };
@@ -177,5 +183,18 @@ export const Small: Story = {
   args: {
     children: "Small",
     size: "small",
+  },
+};
+
+export const DarkMode: Story = {
+  ...ButtonTemplate,
+  args: {
+    colorScheme: "dark",
+    children: "Dark mode primary button",
+  },
+  parameters: {
+    backgrounds: {
+      default: "Dark",
+    },
   },
 };
