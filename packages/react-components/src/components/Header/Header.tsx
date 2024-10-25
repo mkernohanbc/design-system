@@ -47,23 +47,25 @@ export default function Header({
   titleElement = "span",
   colorScheme = "light",
 }: PropsWithChildren<HeaderProps>) {
+  /* Use alternative logo image when in dark mode */
+  function getLogoVersion() {
+    switch (colorScheme) {
+      case "light":
+        return logoImage;
+      case "dark":
+        return logoImageDarkMode;
+    }
+  }
+  /* Set link element type */
   function getLogo() {
     if (!logoLinkElement)
-      switch (colorScheme) {
-        case "light":
-          return (
-            <a href="/" title="Government of British Columbia">
-              {logoImage}
-            </a>
-          );
-        case "dark":
-          return (
-            <a href="/" title="Government of British Columbia">
-              {logoImageDarkMode}
-            </a>
-          );
-      }
-    return cloneElement(logoLinkElement, { children: logoImage });
+      return (
+        <a href="/" title="Government of British Columbia">
+          {getLogoVersion()}
+        </a>
+      );
+
+    return cloneElement(logoLinkElement, { children: getLogoVersion() });
   }
 
   function getTitle() {

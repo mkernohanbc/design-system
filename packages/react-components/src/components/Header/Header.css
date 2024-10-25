@@ -70,5 +70,10 @@
 
 /* Dark mode */
 .bcds-header.dark {
-  background-color: var(--theme-gray-110);
+  background-color: var(--theme-primary-blue);
+  border-bottom-color: var(--theme-primary-gold);
+}
+
+.bcds-header.dark > .bcds-header--container > .bcds-header--title {
+  color: var(--typography-color-primary-invert);
 }
