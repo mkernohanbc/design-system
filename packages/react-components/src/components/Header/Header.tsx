@@ -17,6 +17,10 @@ export interface HeaderProps {
    */
   logoImage?: JSX.Element;
   /**
+   * Alternative logo image for use in dark mode. Defaults to reversed version of the Government of B.C. logo.
+   */
+  logoImageDarkMode?: JSX.Element;
+  /**
    * Array of link elements that are not visible until they are focused. Used
    * for accessibility for keyboard users, to let them easily skip to main
    * content, navigation, etc.
@@ -34,7 +38,6 @@ export interface HeaderProps {
    * Toggle between default and dark colour schemes
    */
   colorScheme?: "light" | "dark";
-  logoImageDarkMode?: JSX.Element;
 }
 
 export default function Header({
