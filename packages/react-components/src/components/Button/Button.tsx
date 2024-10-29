@@ -39,7 +39,7 @@ export default function Button({
   return (
     <ReactAriaButton
       className={`bcds-react-aria-Button ${
-        isDark ? "dark" : ""
+        isDark && "dark"
       } ${size} ${variant} ${danger ? "danger" : ""} ${
         isIconButton ? "icon" : ""
       }`}

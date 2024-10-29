@@ -11,7 +11,7 @@ const defaultContext = {
 
 export const ThemeContext = createContext(defaultContext);
 
-export function ThemeProvider({ children }: ThemeContextProps) {
+export function ThemeProvider({ children, ...props }: ThemeContextProps) {
   const [isDarkMode, setDarkMode] = useState(defaultContext.isDarkMode);
 
   return (
@@ -20,6 +20,7 @@ export function ThemeProvider({ children }: ThemeContextProps) {
         isDarkMode,
         toggleColorMode: () => setDarkMode((isDark) => !isDark),
       }}
+      {...props}
     >
       {children}
     </ThemeContext.Provider>

@@ -93,7 +93,7 @@ export default function Header({
   }
 
   return (
-    <header className={`bcds-header ${isDark ? "dark" : ""}`}>
+    <header className={`bcds-header ${isDark && "dark"}`}>
       <div className="bcds-header--container">
         {getLogo()}
         {skipLinks && (
