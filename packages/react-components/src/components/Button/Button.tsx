@@ -25,7 +25,7 @@ export interface ButtonProps extends ReactAriaButtonProps {
   /**
    * Toggle between default (light) colour scheme and dark mode
    */
-  colorScheme?: "light" | "dark";
+  isDark?: boolean;
 }
 
 export default function Button({
@@ -33,14 +33,16 @@ export default function Button({
   variant = "primary",
   danger = false,
   isIconButton = false,
-  colorScheme = "light",
+  isDark = false,
   ...props
 }: ButtonProps) {
   return (
     <ReactAriaButton
-      className={`bcds-react-aria-Button ${size} ${variant} ${colorScheme} ${
-        danger ? "danger" : ""
-      } ${isIconButton ? "icon" : ""}`}
+      className={`bcds-react-aria-Button ${
+        isDark ? "dark" : ""
+      } ${size} ${variant} ${danger ? "danger" : ""} ${
+        isIconButton ? "icon" : ""
+      }`}
       {...props}
     />
   );
