@@ -66,10 +66,11 @@ function App() {
   const { isDarkMode, toggleColorMode } = useContext(ThemeContext);
 
   return (
-    <>
-      <ThemeProvider>
-        <Header title="B.C. Design System Kitchen Sink">
+    <ThemeProvider>
+      <>
+        <Header title="B.C. Design System Kitchen Sink" isDark={isDarkMode}>
           <Button onPress={toggleColorMode}>Dark mode</Button>
+          <button onClick={toggleColorMode}>Dark mode</button>
         </Header>
         <Header
           isDark={isDarkMode}
@@ -89,6 +90,7 @@ function App() {
           title="Header with custom logo anchor element"
         />
         <Header
+          isDark={isDarkMode}
           title="Header with children"
           skipLinks={[
             <a href="/#main-content">Skip to main content</a>,
@@ -163,7 +165,7 @@ function App() {
             )}
           </div>
         </Header>
-        <Header />
+        <Header isDark={isDarkMode} />
         <main>
           <h1>Components</h1>
           <ButtonPage />
@@ -256,8 +258,8 @@ function App() {
             ]}
           />
         </Footer>
-      </ThemeProvider>
-    </>
+      </>
+    </ThemeProvider>
   );
 }
 
