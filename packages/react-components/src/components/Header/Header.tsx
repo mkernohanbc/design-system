@@ -37,7 +37,7 @@ export interface HeaderProps {
   /**
    * Toggle between default and dark colour schemes
    */
-  darkMode: boolean;
+  isDark?: boolean;
 }
 
 export default function Header({
@@ -48,11 +48,11 @@ export default function Header({
   skipLinks,
   title = "",
   titleElement = "span",
-  darkMode = false,
+  isDark = false,
 }: PropsWithChildren<HeaderProps>) {
   /* Use alternative logo image when in dark mode */
   function getLogoVersion() {
-    switch (darkMode) {
+    switch (isDark) {
       case true:
         return logoImageDarkMode;
       case false:
@@ -93,7 +93,7 @@ export default function Header({
   }
 
   return (
-    <header className={`bcds-header ${darkMode && "dark"}`}>
+    <header className={`bcds-header ${isDark ? "dark" : ""}`}>
       <div className="bcds-header--container">
         {getLogo()}
         {skipLinks && (

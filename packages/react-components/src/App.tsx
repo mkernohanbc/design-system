@@ -4,7 +4,15 @@ import "./App.css";
 import * as tokens from "@bcgov/design-tokens/js";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
-import { Button, Footer, FooterLinks, Header } from "@/components";
+import { ThemeContext } from "./components/ThemeProvider/ThemeProvider";
+
+import {
+  Button,
+  ThemeProvider,
+  Footer,
+  FooterLinks,
+  Header,
+} from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   ButtonPage,
@@ -20,6 +28,8 @@ import {
   SwitchPage,
   TooltipPage,
 } from "@/pages";
+
+import { useContext } from "react";
 
 // This icon is available as a plain SVG at src/assets/icon-menu.svg
 function SvgMenuIcon() {
@@ -53,125 +63,154 @@ function SvgMenuIcon() {
 
 function App() {
   const { isMedium } = useWindowDimensions();
+  const { isDarkMode, toggleColorMode } = useContext(ThemeContext);
 
   return (
     <>
-      <Header title="B.C. Design System Kitchen Sink" />
-      <Header
-        logoLinkElement={
-          <button
-            aria-label="Home"
-            onClick={() => alert("Clicked")}
-            style={{
-              background: "none",
-              border: "none",
-              margin: "0",
-              padding: "0",
-              cursor: "pointer",
-            }}
-          />
-        }
-        title="Header with custom logo anchor element"
-      />
-      <Header
-        title="Header with children"
-        skipLinks={[
-          <a href="/#main-content">Skip to main content</a>,
-          <a href="/#main-content">Skip to main navigation</a>,
-          <a href="/#accessibility">Accessibility Statement</a>,
-        ]}
-      >
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          {isMedium ? (
-            <ul
+      <ThemeProvider>
+        <Header title="B.C. Design System Kitchen Sink">
+          <Button onPress={toggleColorMode}>Dark mode</Button>
+        </Header>
+        <Header
+          isDark={isDarkMode}
+          logoLinkElement={
+            <button
+              aria-label="Home"
+              onClick={() => alert("Clicked")}
               style={{
-                display: "flex",
-                flexDirection: "row",
-                font: tokens.typographyRegularBody,
-                listStyle: "none",
-                paddingLeft: 0,
+                background: "none",
+                border: "none",
+                margin: "0",
+                padding: "0",
+                cursor: "pointer",
               }}
-            >
-              <li
+            />
+          }
+          title="Header with custom logo anchor element"
+        />
+        <Header
+          title="Header with children"
+          skipLinks={[
+            <a href="/#main-content">Skip to main content</a>,
+            <a href="/#main-content">Skip to main navigation</a>,
+            <a href="/#accessibility">Accessibility Statement</a>,
+          ]}
+        >
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            {isMedium ? (
+              <ul
                 style={{
-                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                  display: "flex",
+                  flexDirection: "row",
+                  font: tokens.typographyRegularBody,
+                  listStyle: "none",
+                  paddingLeft: 0,
                 }}
               >
-                Link
-              </li>
-              <li
-                style={{
-                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                }}
-              >
-                Link
-              </li>
-              <li
-                style={{
-                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                }}
-              >
-                Link
-              </li>
-            </ul>
-          ) : (
-            <MenuTrigger>
-              <Button size="small" variant="secondary">
-                Menu <SvgMenuIcon />
-              </Button>
-              <Popover>
-                <Menu>
-                  <MenuItem
-                    style={{
-                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                    }}
-                  >
-                    Link
-                  </MenuItem>
-                  <MenuItem
-                    style={{
-                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                    }}
-                  >
-                    Link
-                  </MenuItem>
-                  <MenuItem
-                    style={{
-                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                    }}
-                  >
-                    Link
-                  </MenuItem>
-                </Menu>
-              </Popover>
-            </MenuTrigger>
-          )}
-        </div>
-      </Header>
-      <Header />
-      <main>
-        <h1>Components</h1>
-        <ButtonPage />
-        <ButtonGroupPage />
-        <CheckboxGroupPage />
-        <SwitchPage />
-        <InlineAlertPage />
-        <ModalDialogPage />
-        <RadioGroupPage />
-        <SelectPage />
-        <TagGroupPage />
-        <TooltipPage />
-        <TextAreaPage />
-        <TextFieldPage />
-      </main>
-      <Footer />
-      <Footer
-        acknowledgement={<p>Optional land acknowledgement slot.</p>}
-        logo={<SvgMenuIcon />}
-        contact={<p>Optional contact information slot.</p>}
-        links={
+                <li
+                  style={{
+                    padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                  }}
+                >
+                  Link
+                </li>
+                <li
+                  style={{
+                    padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                  }}
+                >
+                  Link
+                </li>
+                <li
+                  style={{
+                    padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                  }}
+                >
+                  Link
+                </li>
+              </ul>
+            ) : (
+              <MenuTrigger>
+                <Button size="small" variant="secondary">
+                  Menu <SvgMenuIcon />
+                </Button>
+                <Popover>
+                  <Menu>
+                    <MenuItem
+                      style={{
+                        padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                      }}
+                    >
+                      Link
+                    </MenuItem>
+                    <MenuItem
+                      style={{
+                        padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                      }}
+                    >
+                      Link
+                    </MenuItem>
+                    <MenuItem
+                      style={{
+                        padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
+                      }}
+                    >
+                      Link
+                    </MenuItem>
+                  </Menu>
+                </Popover>
+              </MenuTrigger>
+            )}
+          </div>
+        </Header>
+        <Header />
+        <main>
+          <h1>Components</h1>
+          <ButtonPage />
+          <ButtonGroupPage />
+          <CheckboxGroupPage />
+          <SwitchPage />
+          <InlineAlertPage />
+          <ModalDialogPage />
+          <RadioGroupPage />
+          <SelectPage />
+          <TagGroupPage />
+          <TooltipPage />
+          <TextAreaPage />
+          <TextFieldPage />
+        </main>
+        <Footer />
+        <Footer
+          acknowledgement={<p>Optional land acknowledgement slot.</p>}
+          logo={<SvgMenuIcon />}
+          contact={<p>Optional contact information slot.</p>}
+          links={
+            <FooterLinks
+              title="Optional links list"
+              links={[
+                <a href="/">Lorem ipsum dolor sit amet</a>,
+                <a href="/">Phasellus vitae condimentum erat</a>,
+                <a href="/">Donec ipsum augue, ornare at blandit sit amet</a>,
+                <a href="/">Etiam luctus nulla venenatis nunc luctus rutrum</a>,
+                <a href="/">Mauris vitae sem quis nibh volutpat condimentum</a>,
+                <a href="/">Nam sed sodales arcu, ut fringilla quam</a>,
+                <a href="/">
+                  Curabitur accumsan sapien condimentum semper condimentum
+                </a>,
+              ]}
+            />
+          }
+          copyright="Copyright 2025 BC Gov"
+        />
+        <Footer
+          acknowledgement={
+            <p>
+              Footer with <code>children</code> below:
+            </p>
+          }
+        >
           <FooterLinks
-            title="Optional links list"
+            title="Footer Links 1"
             links={[
               <a href="/">Lorem ipsum dolor sit amet</a>,
               <a href="/">Phasellus vitae condimentum erat</a>,
@@ -184,63 +223,40 @@ function App() {
               </a>,
             ]}
           />
-        }
-        copyright="Copyright 2025 BC Gov"
-      />
-      <Footer
-        acknowledgement={
-          <p>
-            Footer with <code>children</code> below:
-          </p>
-        }
-      >
-        <FooterLinks
-          title="Footer Links 1"
-          links={[
-            <a href="/">Lorem ipsum dolor sit amet</a>,
-            <a href="/">Phasellus vitae condimentum erat</a>,
-            <a href="/">Donec ipsum augue, ornare at blandit sit amet</a>,
-            <a href="/">Etiam luctus nulla venenatis nunc luctus rutrum</a>,
-            <a href="/">Mauris vitae sem quis nibh volutpat condimentum</a>,
-            <a href="/">Nam sed sodales arcu, ut fringilla quam</a>,
-            <a href="/">
-              Curabitur accumsan sapien condimentum semper condimentum
-            </a>,
-          ]}
-        />
-        <FooterLinks
-          title="Footer Links 2"
-          links={[
-            <a href="/">Maecenas quis neque nulla</a>,
-            <a href="/">Vivamus pulvinar sed leo ut placerat</a>,
-            <a href="/">Suspendisse potenti</a>,
-            <a href="/">Morbi id diam id enim interdum placerat</a>,
-            <a href="/">Integer sed odio vitae urna placerat sodales</a>,
-            <a href="/">Quisque dignissim ultricies nisl eget consequat</a>,
-            <a href="/">
-              Nullam non nulla tincidunt ligula feugiat porttitor at ac leo
-            </a>,
-            <a href="/">Proin dictum vestibulum accumsan</a>,
-            <a href="/">
-              Duis felis purus, pulvinar eu nunc vitae, congue elementum metus
-            </a>,
-          ]}
-        />
-        <FooterLinks
-          title="Footer Links 3"
-          links={[
-            <a href="/">Lorem ipsum dolor sit amet</a>,
-            <a href="/">Phasellus vitae condimentum erat</a>,
-            <a href="/">Donec ipsum augue, ornare at blandit sit amet</a>,
-            <a href="/">Etiam luctus nulla venenatis nunc luctus rutrum</a>,
-            <a href="/">Mauris vitae sem quis nibh volutpat condimentum</a>,
-            <a href="/">Nam sed sodales arcu, ut fringilla quam</a>,
-            <a href="/">
-              Curabitur accumsan sapien condimentum semper condimentum
-            </a>,
-          ]}
-        />
-      </Footer>
+          <FooterLinks
+            title="Footer Links 2"
+            links={[
+              <a href="/">Maecenas quis neque nulla</a>,
+              <a href="/">Vivamus pulvinar sed leo ut placerat</a>,
+              <a href="/">Suspendisse potenti</a>,
+              <a href="/">Morbi id diam id enim interdum placerat</a>,
+              <a href="/">Integer sed odio vitae urna placerat sodales</a>,
+              <a href="/">Quisque dignissim ultricies nisl eget consequat</a>,
+              <a href="/">
+                Nullam non nulla tincidunt ligula feugiat porttitor at ac leo
+              </a>,
+              <a href="/">Proin dictum vestibulum accumsan</a>,
+              <a href="/">
+                Duis felis purus, pulvinar eu nunc vitae, congue elementum metus
+              </a>,
+            ]}
+          />
+          <FooterLinks
+            title="Footer Links 3"
+            links={[
+              <a href="/">Lorem ipsum dolor sit amet</a>,
+              <a href="/">Phasellus vitae condimentum erat</a>,
+              <a href="/">Donec ipsum augue, ornare at blandit sit amet</a>,
+              <a href="/">Etiam luctus nulla venenatis nunc luctus rutrum</a>,
+              <a href="/">Mauris vitae sem quis nibh volutpat condimentum</a>,
+              <a href="/">Nam sed sodales arcu, ut fringilla quam</a>,
+              <a href="/">
+                Curabitur accumsan sapien condimentum semper condimentum
+              </a>,
+            ]}
+          />
+        </Footer>
+      </ThemeProvider>
     </>
   );
 }
