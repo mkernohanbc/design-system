@@ -24,6 +24,8 @@ export interface TextFieldProps extends ReactAriaTextFieldProps {
   iconLeft?: React.ReactElement;
   /* Icon slot to right of text input field */
   iconRight?: React.ReactElement;
+  /* Position of description slot relative to input field */
+  descriptionPosition?: "before" | "after";
 }
 
 export default function TextField({
@@ -31,6 +33,7 @@ export default function TextField({
   label,
   description,
   errorMessage,
+  descriptionPosition = "before",
   iconLeft,
   iconRight,
   ...props
@@ -49,15 +52,25 @@ export default function TextField({
               )}
             </Label>
           )}
+          {descriptionPosition === "before" && description && (
+            <Text
+              slot="description"
+              className={`bcds-react-aria-TextField--Description`}
+            >
+              {description}
+            </Text>
+          )}
           <div
-            className={`bcds-react-aria-TextField--container ${size === "small" ? "small" : "medium"}`}
+            className={`bcds-react-aria-TextField--container ${
+              size === "small" ? "small" : "medium"
+            }`}
           >
             {iconLeft}
             <Input className="bcds-react-aria-TextField--Input" />
             {isInvalid && <SvgExclamationIcon />}
             {iconRight}
           </div>
-          {description && (
+          {descriptionPosition === "after" && description && (
             <Text
               slot="description"
               className={`bcds-react-aria-TextField--Description`}
