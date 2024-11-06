@@ -1,0 +1,12 @@
+.bcds-react-aria-Link {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--layout-margin-small);
+}
+
+.bcds-react-aria-Link--Icon {
+  justify-self: flex-start;
+  align-self: center;
+  padding-top: var(--layout-padding-xsmall);
+}
