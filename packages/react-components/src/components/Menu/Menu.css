@@ -1,0 +1,12 @@
+.bcds-react-aria-Menu {
+  display: inline-flex;
+}
+
+.bcds-react-aria-Menu--Icon {
+  justify-self: flex-start;
+  align-self: center;
+  padding-top: var(--layout-padding-xsmall);
+}
+
+.bcds-react-aria-Popover {
+}

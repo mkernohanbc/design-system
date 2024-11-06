@@ -4,7 +4,6 @@ import {
 } from "react-aria-components";
 
 import "./Link.css";
-import React from "react";
 
 export interface LinkProps extends ReactAriaLinkProps {
   iconLeft?: React.ReactNode;
