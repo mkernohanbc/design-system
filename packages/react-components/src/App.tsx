@@ -17,6 +17,7 @@ import {
   Link,
   Menu,
   MenuTrigger,
+  SvgInfoIcon,
 } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
@@ -72,7 +73,9 @@ function App() {
   return (
     <>
       <Header title="B.C. Design System Kitchen Sink">
-        <Link href="#">Test link</Link>
+        <Link href="#" iconLeft={<SvgInfoIcon />}>
+          Test link
+        </Link>
         <MenuTrigger>
           <Button>Menu</Button>
           <Menu>

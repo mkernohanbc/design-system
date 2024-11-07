@@ -1,12 +1,14 @@
 .bcds-react-aria-Link {
   display: inline-flex;
   flex-direction: row;
-  align-items: flex-start;
-  gap: var(--layout-margin-small);
+  align-items: center;
+  gap: var(--layout-margin-xsmall);
+  font: var(--typography-regular-body);
+  color: var(--typography-color-link);
+  text-decoration: underline;
+  text-underline-offset: var(--layout-padding-xsmall);
 }
 
 .bcds-react-aria-Link--Icon {
-  justify-self: flex-start;
-  align-self: center;
-  padding-top: var(--layout-padding-xsmall);
+  padding-top: var(--layout-padding-small);
 }
