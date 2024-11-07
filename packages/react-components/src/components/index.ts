@@ -14,6 +14,7 @@ export { default as Header } from "./Header";
 export { default as InlineAlert } from "./InlineAlert";
 export { default as Link } from "./Link";
 export { default as Menu, MenuTrigger, SubmenuTrigger } from "./Menu";
+export { default as MenuItem } from "./MenuItem";
 export { default as Modal } from "./Modal";
 export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";

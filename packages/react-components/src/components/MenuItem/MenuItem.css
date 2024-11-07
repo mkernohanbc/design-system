@@ -1,0 +1,12 @@
+.bcds-react-aria-Menu-Item {
+  font: var(--typography-regular-body);
+  color: var(--typography-color-secondary);
+}
+
+a.bcds-react-aria-Menu-Item {
+  color: var(--typography-color-link);
+}
+
+.bcds-react-aria-Menu-Item[data-hovered] {
+  color: var(--surface-color-border-active);
+}

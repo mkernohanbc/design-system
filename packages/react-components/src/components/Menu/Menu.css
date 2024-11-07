@@ -1,12 +1,15 @@
 .bcds-react-aria-Menu {
   display: inline-flex;
-}
-
-.bcds-react-aria-Menu--Icon {
-  justify-self: flex-start;
-  align-self: center;
-  padding-top: var(--layout-padding-xsmall);
+  flex-direction: column;
+  gap: var(--layout-margin-small);
 }
 
 .bcds-react-aria-Popover {
+  background-color: var(--surface-color-forms-default);
+  border: 1px solid var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-medium);
+  box-shadow: var(--surface-shadow-medium);
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
 }

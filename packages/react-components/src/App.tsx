@@ -16,7 +16,7 @@ import {
   Header,
   Link,
   Menu,
-  MenuTrigger,
+  MenuItem,
   SvgInfoIcon,
 } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
@@ -82,12 +82,11 @@ function App() {
         <Link href="#" isDisabled iconLeft={<SvgInfoIcon />}>
           Test disabled link
         </Link>
-        <MenuTrigger>
-          <Button>Menu</Button>
-          <Menu>
-            <Link>Test link</Link>
-          </Menu>
-        </MenuTrigger>
+        <Menu triggerElement={<Button size="small">Menu</Button>}>
+          <MenuItem href="#">Item 1 has a longish name</MenuItem>
+          <MenuItem href="#">Item 2</MenuItem>
+          <MenuItem href="#">Item 3</MenuItem>
+        </Menu>
       </Header>
       <Header
         logoLinkElement={
