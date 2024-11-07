@@ -22,14 +22,8 @@
   padding: var(--layout-padding-small) var(--layout-padding-none);
 }
 
-/* Kludgy way to add delimiters between items, needs reworking 
-.bcds-Navbar--Container > :first-child {
-  padding-right: var(--layout-padding-medium);
+.bcds-Navbar--Separator {
+  width: var(--layout-border-width-medium);
+  height: 80%;
+  background-color: var(--surface-color-border-default);
 }
-
-.bcds-Navbar--Container > :not(:first-child) {
-  border-left: var(--layout-border-width-medium) solid
-    var(--surface-color-border-default);
-  padding: var(--layout-padding-none) var(--layout-padding-medium);
-}
-*/
