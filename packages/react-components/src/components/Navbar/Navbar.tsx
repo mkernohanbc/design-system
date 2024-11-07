@@ -7,7 +7,9 @@ export interface NavbarProps extends React.PropsWithChildren {
 export default function Navbar({ children, ...props }: NavbarProps) {
   return (
     <div className="bcds-Navbar" {...props}>
-      <div className="bcds-Navbar--Container">{children}</div>
+      <div className="bcds-Navbar--Container" role="navigation">
+        {children}
+      </div>
     </div>
   );
 }
