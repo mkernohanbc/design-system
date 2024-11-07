@@ -10,7 +10,7 @@ import "./Menu.css";
 import React from "react";
 
 export interface MenuProps<T extends object> extends ReactAriaMenuProps<T> {
-  triggerElement?: React.ReactNode;
+  triggerElement: React.ReactNode;
 }
 
 export default function Menu<T extends object>({
