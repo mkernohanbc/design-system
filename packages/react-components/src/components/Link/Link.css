@@ -3,7 +3,6 @@
   flex-direction: row;
   align-items: center;
   gap: var(--layout-margin-xsmall);
-  font: var(--typography-regular-body);
   color: var(--typography-color-link);
   text-decoration: underline;
   text-underline-offset: var(--layout-padding-xsmall);
@@ -11,4 +10,32 @@
 
 .bcds-react-aria-Link--Icon {
   padding-top: var(--layout-padding-small);
+}
+
+/* Sizing */
+.bcds-react-aria-Link.medium {
+  font: var(--typography-regular-body);
+}
+
+.bcds-react-aria-Link.small {
+  font: var(--typography-regular-small-body);
+}
+
+/* Hover state */
+.bcds-react-aria-Link[data-hovered] {
+  color: var(--surface-color-border-active);
+}
+
+/* Focus state */
+.bcds-react-aria-Link[data-focus-visible] {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-xsmall);
+  border-radius: var(--layout-border-radius-small);
+}
+
+/* Disabled state */
+.bcds-react-aria-Link[data-disabled] {
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
 }

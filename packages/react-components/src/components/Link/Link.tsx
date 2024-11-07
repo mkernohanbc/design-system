@@ -8,16 +8,18 @@ import "./Link.css";
 export interface LinkProps extends ReactAriaLinkProps {
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
+  size?: "medium" | "small";
 }
 
 export default function Link({
   children,
+  size = "medium",
   iconLeft,
   iconRight,
   ...props
 }: LinkProps) {
   return (
-    <ReactAriaLink className="bcds-react-aria-Link" {...props}>
+    <ReactAriaLink className={`bcds-react-aria-Link ${size}`} {...props}>
       {iconLeft && (
         <span className="bcds-react-aria-Link--Icon">{iconLeft}</span>
       )}

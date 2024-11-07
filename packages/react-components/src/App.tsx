@@ -76,6 +76,12 @@ function App() {
         <Link href="#" iconLeft={<SvgInfoIcon />}>
           Test link
         </Link>
+        <Link href="#" size="small" iconLeft={<SvgInfoIcon />}>
+          Test small link
+        </Link>
+        <Link href="#" isDisabled iconLeft={<SvgInfoIcon />}>
+          Test disabled link
+        </Link>
         <MenuTrigger>
           <Button>Menu</Button>
           <Menu>
