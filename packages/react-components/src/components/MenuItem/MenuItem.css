@@ -1,12 +1,28 @@
 .bcds-react-aria-Menu-Item {
-  font: var(--typography-regular-body);
   color: var(--typography-color-secondary);
 }
 
+/* Link styling */
 a.bcds-react-aria-Menu-Item {
   color: var(--typography-color-link);
 }
 
+/* States */
+
 .bcds-react-aria-Menu-Item[data-hovered] {
   color: var(--surface-color-border-active);
+}
+
+.bcds-react-aria-Menu-Item[data-disabled] {
+  color: var(--typography-color-disabled);
+  cursor: not-allowed;
+}
+
+/* Sizing */
+.bcds-react-aria-Menu-Item.medium {
+  font: var(--typography-regular-body);
+}
+
+.bcds-react-aria-Menu-Item.small {
+  font: var(--typography-regular-small-body);
 }

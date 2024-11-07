@@ -84,7 +84,9 @@ function App() {
         </Link>
         <Menu triggerElement={<Button size="small">Menu</Button>}>
           <MenuItem href="#">Item 1 has a longish name</MenuItem>
-          <MenuItem href="#">Item 2</MenuItem>
+          <MenuItem href="#" size="small">
+            Item 2 uses the "small" size
+          </MenuItem>
           <MenuItem href="#">Item 3</MenuItem>
         </Menu>
       </Header>
