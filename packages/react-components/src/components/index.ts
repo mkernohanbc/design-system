@@ -12,6 +12,8 @@ export { default as Footer, FooterLinks } from "./Footer";
 export { default as Form } from "./Form";
 export { default as Header } from "./Header";
 export { default as InlineAlert } from "./InlineAlert";
+export { default as Link } from "./Link";
+export { default as Menu, MenuTrigger, SubmenuTrigger } from "./Menu";
 export { default as Modal } from "./Modal";
 export { default as Radio } from "./Radio";
 export { default as RadioGroup } from "./RadioGroup";

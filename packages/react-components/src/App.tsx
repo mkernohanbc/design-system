@@ -1,10 +1,23 @@
-import { Menu, MenuItem, MenuTrigger, Popover } from "react-aria-components";
+import {
+  Menu as ReactAriaMenu,
+  MenuItem as ReactAriaMenuItem,
+  MenuTrigger as ReactAriaMenuTrigger,
+  Popover as ReactAriaPopover,
+} from "react-aria-components";
 
 import "./App.css";
 import * as tokens from "@bcgov/design-tokens/js";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
-import { Button, Footer, FooterLinks, Header } from "@/components";
+import {
+  Button,
+  Footer,
+  FooterLinks,
+  Header,
+  Link,
+  Menu,
+  MenuTrigger,
+} from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
   AlertBannerPage,
@@ -58,7 +71,15 @@ function App() {
 
   return (
     <>
-      <Header title="B.C. Design System Kitchen Sink" />
+      <Header title="B.C. Design System Kitchen Sink">
+        <Link href="#">Test link</Link>
+        <MenuTrigger>
+          <Button>Menu</Button>
+          <Menu>
+            <Link>Test link</Link>
+          </Menu>
+        </MenuTrigger>
+      </Header>
       <Header
         logoLinkElement={
           <button
@@ -117,36 +138,36 @@ function App() {
               </li>
             </ul>
           ) : (
-            <MenuTrigger>
+            <ReactAriaMenuTrigger>
               <Button size="small" variant="secondary">
                 Menu <SvgMenuIcon />
               </Button>
-              <Popover>
-                <Menu>
-                  <MenuItem
+              <ReactAriaPopover>
+                <ReactAriaMenu>
+                  <ReactAriaMenuItem
                     style={{
                       padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
                     }}
                   >
                     Link
-                  </MenuItem>
-                  <MenuItem
+                  </ReactAriaMenuItem>
+                  <ReactAriaMenuItem
                     style={{
                       padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
                     }}
                   >
                     Link
-                  </MenuItem>
-                  <MenuItem
+                  </ReactAriaMenuItem>
+                  <ReactAriaMenuItem
                     style={{
                       padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
                     }}
                   >
                     Link
-                  </MenuItem>
-                </Menu>
-              </Popover>
-            </MenuTrigger>
+                  </ReactAriaMenuItem>
+                </ReactAriaMenu>
+              </ReactAriaPopover>
+            </ReactAriaMenuTrigger>
           )}
         </div>
       </Header>
