@@ -13,7 +13,7 @@ export interface LinkProps extends ReactAriaLinkProps {
 
 export default function Link({
   children,
-  size = "medium",
+  size = "small",
   iconLeft,
   iconRight,
   ...props

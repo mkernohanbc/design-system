@@ -1,9 +1,8 @@
 .bcds-Navbar {
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  padding: var(--layout-padding-none) var(--layout-padding-medium);
+  flex-wrap: wrap;
+  padding: var(--layout-padding-none) var(--layout-padding-small);
   justify-content: space-around;
   background-color: var(--surface-color-menus-default);
   border-bottom: var(--layout-border-width-small) solid
@@ -15,7 +14,6 @@
   flex-direction: row;
   gap: var(--layout-margin-medium);
   align-items: center;
-  box-sizing: border-box;
   flex-grow: 1;
   flex-wrap: wrap;
   max-width: 1100px;
@@ -24,6 +22,7 @@
 
 .bcds-Navbar--Separator {
   width: var(--layout-border-width-medium);
-  height: 80%;
+  height: 1.5rem;
   background-color: var(--surface-color-border-default);
+  border-radius: var(--layout-border-radius-small);
 }

@@ -11,5 +11,5 @@
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
   overflow-y: auto;
-  padding: var(--layout-padding-hair) var(--layout-padding-xsmall);
+  padding: var(--layout-padding-small) var(--layout-padding-small);
 }

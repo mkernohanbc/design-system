@@ -199,6 +199,7 @@ function App() {
         <Link href="#" size="small">
           Nav item 5
         </Link>
+        <Button size="small">Do a thing</Button>
       </Navbar>
       <AlertBannerPage />
       <main>
