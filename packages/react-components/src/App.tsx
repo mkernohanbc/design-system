@@ -17,7 +17,6 @@ import {
   Link,
   Menu,
   MenuItem,
-  Navbar,
   SvgInfoIcon,
 } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
@@ -190,25 +189,25 @@ function App() {
           )}
         </div>
       </Header>
-      <Header />
-      <Navbar>
-        <Link href="#" size="small">
-          Nav item 1
-        </Link>
-        <Link href="#" size="small">
-          Nav item 2
-        </Link>
-        <Link href="#" size="small" iconLeft={<SvgInfoIcon />}>
-          Nav item 3
-        </Link>
-        <Link href="#" size="small">
-          Nav item 4
-        </Link>
-        <Link href="#" size="small">
-          Nav item 5
-        </Link>
-        <Button size="small">Do a thing</Button>
-      </Navbar>
+      <Header
+        subnavItems={[
+          <Link href="#" size="small">
+            Nav item 1
+          </Link>,
+          <Link href="#" size="small">
+            Nav item 2
+          </Link>,
+          <Link href="#" size="small" iconLeft={<SvgInfoIcon />}>
+            Nav item 3
+          </Link>,
+          <Link href="#" size="small">
+            Nav item 4
+          </Link>,
+          <Link href="#" size="small">
+            Nav item 5
+          </Link>,
+        ]}
+      />
       <AlertBannerPage />
       <main>
         <h1>Components</h1>

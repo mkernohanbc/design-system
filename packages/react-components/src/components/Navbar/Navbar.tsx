@@ -13,14 +13,14 @@ export default function Navbar({ children, ...props }: NavbarProps) {
   );
   return (
     <div className="bcds-Navbar" {...props}>
-      <div className="bcds-Navbar--Container" role="navigation">
+      <nav className="bcds-Navbar--Container">
         {childrenArray.map((child, index) => (
           <React.Fragment key={index}>
             {child}
             {index < childrenArray.length - 1 && <Separator />}
           </React.Fragment>
         ))}
-      </div>
+      </nav>
     </div>
   );
 }
