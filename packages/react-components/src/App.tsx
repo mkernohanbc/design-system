@@ -74,21 +74,29 @@ function App() {
   return (
     <>
       <Header title="B.C. Design System Kitchen Sink">
+        <Link href="#" size="medium" iconLeft={<SvgInfoIcon />}>
+          Test medium link
+        </Link>
         <Link href="#" iconLeft={<SvgInfoIcon />}>
           Test link
-        </Link>
-        <Link href="#" size="small" iconLeft={<SvgInfoIcon />}>
-          Test small link
         </Link>
         <Link href="#" isDisabled iconLeft={<SvgInfoIcon />}>
           Test disabled link
         </Link>
-        <Menu triggerElement={<Button size="small">Menu</Button>}>
+        <Menu
+          triggerElement={
+            <Button size="small" variant="secondary">
+              Menu <SvgMenuIcon />
+            </Button>
+          }
+        >
           <MenuItem href="#">Item 1 has a longish name</MenuItem>
           <MenuItem href="#" size="small">
             Item 2 uses the "small" size
           </MenuItem>
-          <MenuItem href="#">Item 3</MenuItem>
+          <MenuItem href="#" isDisabled>
+            Item 3 is disabled
+          </MenuItem>
         </Menu>
       </Header>
       <Header

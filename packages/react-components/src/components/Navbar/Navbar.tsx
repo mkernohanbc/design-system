@@ -6,6 +6,7 @@ export interface NavbarProps extends React.PropsWithChildren {
 }
 
 export default function Navbar({ children, ...props }: NavbarProps) {
+  /* Add separators between children */
   const childrenArray = React.Children.toArray(children);
   const Separator = () => (
     <span className="bcds-Navbar--Separator" role="separator" />
