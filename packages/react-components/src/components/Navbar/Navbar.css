@@ -12,7 +12,7 @@
 .bcds-Navbar--Container {
   display: inline-flex;
   flex-direction: row;
-  gap: var(--layout-margin-medium);
+  gap: var(--layout-margin-small);
   align-items: center;
   flex-grow: 1;
   flex-wrap: wrap;
@@ -21,7 +21,7 @@
 }
 
 .bcds-Navbar--Separator {
-  width: var(--layout-border-width-medium);
+  width: var(--layout-border-width-small);
   height: 1.5rem;
   background-color: var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-small);
