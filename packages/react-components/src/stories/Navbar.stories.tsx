@@ -41,6 +41,7 @@ export const NavbarTemplate: Story = {
   render: ({ ...args }: NavbarProps) => (
     <>
       <Header title="B.C. Design System">
+        <div style={{ width: "300px" }} />
         <Button variant="secondary" size="small">
           Log in
         </Button>
