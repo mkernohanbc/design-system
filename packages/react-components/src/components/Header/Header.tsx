@@ -30,7 +30,7 @@ export interface HeaderProps {
    * Desired element that renders the `title` string. Defaults to `<span>`.
    */
   titleElement?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span" | "p";
-  /** Show or hide a secondary navigation bar */
+  /** Items to be rendered inside secondary `<Navbar>` */
   subnavItems?: React.ReactNode;
 }
 

@@ -86,3 +86,11 @@ If no `title` is passed, the vertical bar to the left of the title won't appear.
 The right side of the Header has a slot for the `children` prop. This is where you can place your application-specific navigation elements like menu buttons.
 
 <Canvas of={HeaderStories?.HeaderWithChildren} />
+
+### Subnavigation
+
+The Header can also display an additional secondary navigation bar, populated via the `subnavItems` prop.
+
+`subnavItems` expects an array of components as children, and renders them inside a [Navbar](/?path=/docs/components-header-navbar--docs). It is designed to work well with [Link](/?path=/docs/utility-link--docs) and [Button](/?path=/docs/components-button-button--docs) components:
+
+<Canvas of={HeaderStories.HeaderWithSubnav} />

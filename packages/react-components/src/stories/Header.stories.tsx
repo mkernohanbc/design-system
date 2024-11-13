@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button, Header } from "../components";
+import { Button, Header, Link } from "../components";
 import { HeaderProps } from "../components/Header";
 
 const meta = {
@@ -95,5 +95,31 @@ export const HeaderWithTheWorks: Story = {
     logoLinkElement: <a href="/home" title="Home" />,
     skipLinks: skipLinks,
     children: <LoginButton />,
+  },
+};
+
+export const HeaderWithSubnav: Story = {
+  args: {
+    title: "Government of B.C.",
+    logoLinkElement: <a href="/home" title="Home" />,
+    skipLinks: skipLinks,
+    children: <LoginButton />,
+    subnavItems: [
+      <Link href="#" size="small">
+        Nav item 1
+      </Link>,
+      <Link href="#" size="small">
+        Nav item 2
+      </Link>,
+      <Link href="#" size="small">
+        Nav item 3
+      </Link>,
+      <Link href="#" size="small">
+        Nav item 4
+      </Link>,
+      <Link href="#" size="small">
+        Nav item 5
+      </Link>,
+    ],
   },
 };
