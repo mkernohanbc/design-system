@@ -7,9 +7,9 @@ import "./Link.css";
 
 export interface LinkProps extends ReactAriaLinkProps {
   /* Left icon slot */
-  iconLeft?: React.ReactNode;
+  iconLeft?: React.ReactElement;
   /* Right icon slot */
-  iconRight?: React.ReactNode;
+  iconRight?: React.ReactElement;
   /* Text size */
   size?: "medium" | "small";
   /* ARIA label */

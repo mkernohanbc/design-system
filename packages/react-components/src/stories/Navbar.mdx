@@ -11,9 +11,46 @@ import {
 } from "@storybook/blocks";
 
 import * as NavbarStories from "./Navbar.stories";
+import { Navbar } from "@/components";
 
 <Meta title="Components/Header/Navbar" />
 
 # Navbar
 
-<Subtitle>TKTK</Subtitle>
+<Subtitle>
+  A navbar provides a secondary navigation header that can be used in
+  conjunction with the header or elsewhere in your app.
+</Subtitle>
+
+<Source
+  code={`import { Navbar } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+The navbar is built into the [Header](/?path=/docs/components-header-header--docs#subnavigation), and can be populated via the `subnavItems` prop. It can also be implemented separately.
+
+Learn more about working with the navbar component:
+
+- [Usage and best practice guidance]()
+- [View the navbar component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+## Controls
+
+<Primary of={NavbarStories} />
+<Controls of={NavbarStories.NavbarTemplate} />
+
+## Configuration
+
+Navbar expects an array of components passed to the `children` slot. It renders children inside a `<nav>` element, and automatically places a visible separator between each item.
+
+It is designed to work well with [Link](/?path=/docs/utility-link--docs) and [Button](/?path=/docs/components-button-button--docs) components.
+
+### Styling
+
+To add additional CSS rules for navigation items, target the `.bcds-Navbar--Container` class.
+
+### Responsive design
+
+Navbar is responsive by design, but you may need to implement additional styling if you have a long list of navigation items, or want to collapse the menu at smaller viewport sizes.
