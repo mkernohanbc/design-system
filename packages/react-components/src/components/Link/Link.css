@@ -79,3 +79,40 @@ em .bcds-react-aria-Link.large {
   color: var(--typography-color-disabled);
   cursor: not-allowed;
 }
+
+/* Heading styles */
+h1 .bcds-react-aria-Link.small,
+h1 .bcds-react-aria-Link.medium,
+h1 .bcds-react-aria-Link.large {
+  font: var(--typography-bold-h1);
+}
+
+h2 .bcds-react-aria-Link.small,
+h2 .bcds-react-aria-Link.medium,
+h2 .bcds-react-aria-Link.large {
+  font: var(--typography-bold-h2);
+}
+
+h3 .bcds-react-aria-Link.small,
+h3 .bcds-react-aria-Link.medium,
+h3 .bcds-react-aria-Link.large {
+  font: var(--typography-bold-h3);
+}
+
+h4 .bcds-react-aria-Link.small,
+h4 .bcds-react-aria-Link.medium,
+h4 .bcds-react-aria-Link.large {
+  font: var(--typography-bold-h4);
+}
+
+h5 .bcds-react-aria-Link.small,
+h5 .bcds-react-aria-Link.medium,
+h5 .bcds-react-aria-Link.large {
+  font: var(--typography-bold-h5);
+}
+
+h6 .bcds-react-aria-Link.small,
+h6 .bcds-react-aria-Link.medium,
+h6 .bcds-react-aria-Link.large {
+  font: var(--typography-bold-h6);
+}

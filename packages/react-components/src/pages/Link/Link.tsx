@@ -29,15 +29,19 @@ export default function LinkPage() {
           This is an example of a disabled link.
         </Link>{" "}
       </p>
+      <h3 id="headings">
+        Links and <Link href="#headings">headings</Link>
+      </h3>
       <p>
         The Link component is styled to align with the B.C. Design System's
-        typescale. It will respect generic text styling like{" "}
+        typescale. It matches the standard styles for H1 to H6 headings. It will
+        also respect generic text styling like{" "}
         <b>
-          <Link href="#">bold</Link>
+          <Link href="#headings">bold</Link>
         </b>{" "}
         and{" "}
         <i>
-          <Link href="#">italics</Link>
+          <Link href="#headings">italics</Link>
         </i>
         .
       </p>
