@@ -1,7 +1,7 @@
 .bcds-react-aria-Link {
   display: inline-flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   gap: var(--layout-margin-xsmall);
   color: var(--typography-color-link);
   text-decoration: none;
@@ -9,16 +9,54 @@
 }
 
 .bcds-react-aria-Link--Icon {
-  padding-top: var(--layout-padding-small);
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
 }
 
-/* Sizing */
+/* Small size */
+.bcds-react-aria-Link.small {
+  font: var(--typography-regular-small-body);
+}
+
+b .bcds-react-aria-Link.small,
+strong .bcds-react-aria-Link.small {
+  font: var(--typography-bold-small-body);
+}
+
+i .bcds-react-aria-Link.small,
+em .bcds-react-aria-Link.small {
+  font: var(--typography-italic-small-body);
+}
+
+/* Medium size */
 .bcds-react-aria-Link.medium {
   font: var(--typography-regular-body);
 }
 
-.bcds-react-aria-Link.small {
-  font: var(--typography-regular-small-body);
+b .bcds-react-aria-Link.medium,
+strong .bcds-react-aria-Link.medium {
+  font: var(--typography-bold-body);
+}
+
+i .bcds-react-aria-Link.medium,
+em .bcds-react-aria-Link.medium {
+  font: var(--typography-italic-body);
+}
+
+/* Large size */
+.bcds-react-aria-Link.large {
+  font: var(--typography-regular-large-body);
+}
+
+b .bcds-react-aria-Link.large,
+strong b .bcds-react-aria-Link.large {
+  font: var(--typography-bold-large-body);
+}
+
+i .bcds-react-aria-Link.large,
+em .bcds-react-aria-Link.large {
+  font: var(--typography-italic-large-body);
 }
 
 /* Hover state */

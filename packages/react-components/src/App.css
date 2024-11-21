@@ -39,3 +39,11 @@ p b {
 p i {
   font: var(--typography-italic-body);
 }
+
+p.small {
+  font: var(--typography-regular-small-body);
+}
+
+p.large {
+  font: var(--typography-regular-large-body);
+}

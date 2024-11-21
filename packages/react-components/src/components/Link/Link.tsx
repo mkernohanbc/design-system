@@ -11,14 +11,14 @@ export interface LinkProps extends ReactAriaLinkProps {
   /* Right icon slot */
   iconRight?: React.ReactElement;
   /* Text size */
-  size?: "medium" | "small";
+  size?: "small" | "medium" | "large";
   /* ARIA label */
   ariaLabel?: string | undefined;
 }
 
 export default function Link({
   children,
-  size = "small",
+  size = "medium",
   iconLeft,
   iconRight,
   ariaLabel,
