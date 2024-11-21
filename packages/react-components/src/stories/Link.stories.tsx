@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import * as tokens from "@bcgov/design-tokens/js";
 
 import { Link, SvgInfoIcon } from "../components";
 import { LinkProps } from "@/components/Link";
@@ -75,7 +76,7 @@ export const LargeLink: Story = {
   ...LinkTemplate,
   args: {
     size: "large",
-    children: ["This likn uses the large text size"],
+    children: ["This link uses the large text size"],
     onPress: () => alert("onPress()"),
   },
 };
@@ -116,4 +117,13 @@ export const IconOnlyLink: Story = {
     ariaLabel: "Information",
     onPress: () => alert("onPress()"),
   },
+};
+
+export const LinkInHeading: Story = {
+  args: { children: ["This link"], onPress: () => alert("onPress()") },
+  render: ({ ...args }: LinkProps) => (
+    <h2 style={{ font: tokens.typographyBoldH2 }}>
+      <Link {...args} /> is part of an H2 heading
+    </h2>
+  ),
 };

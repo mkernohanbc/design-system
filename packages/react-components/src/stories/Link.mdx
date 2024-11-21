@@ -42,7 +42,7 @@ It is based on [React Aria Link](https://react-spectrum.adobe.com/react-aria/Lin
 
 Link text is set via the `children` slot.
 
-You can configure a link's behaviour using the `href` to provide a destination URL, or use the `onPress` prop to configure click/press events.
+You can configure a link's behaviour using the `href` prop to provide a destination URL, or use the `onPress` prop to configure click/press events.
 
 If a link has an `href`, it renders as an `<a>` element. Otherwise, it will render a `<span>` with the ARIA "[link](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)" role.
 
@@ -56,9 +56,11 @@ Use the `size` prop to choose between `small`, `medium` and `large` sizes:
 <Canvas of={LinkStories.MediumLink} />
 <Canvas of={LinkStories.LargeLink} />
 
-If no `size` prop is passed, it will default to `medium`.
+Text size and styling align to the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342). If no `size` prop is passed, it will default to `medium`.
 
-Links will also respect generic text sizing like bold or italics, and will match the correct heading style if enclosed in an element like `<h1>`.
+Links will also respect generic text sizing like bold or italics. They will match the correct heading style from the design system typescale if enclosed in an element like `<h2>`:
+
+<Canvas of={LinkStories.LinkInHeading} />
 
 ### Link icons
 
