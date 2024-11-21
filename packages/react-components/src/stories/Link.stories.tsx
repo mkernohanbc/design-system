@@ -13,7 +13,7 @@ const meta = {
       description: "Populates link text",
     },
     size: {
-      options: ["small", "medium"],
+      options: ["small", "medium", "large"],
       control: { type: "radio" },
       description: "Sets text size",
     },
@@ -45,9 +45,9 @@ type Story = StoryObj<typeof meta>;
 
 export const LinkTemplate: Story = {
   args: {
-    size: "small",
+    size: "medium",
     children: ["Link text"],
-    href: "/?path=/docs/utility-link--docs",
+    onPress: () => alert("onPress()"),
     isDisabled: false,
   },
   render: ({ ...args }: LinkProps) => <Link {...args} />,
@@ -67,6 +67,15 @@ export const MediumLink: Story = {
   args: {
     size: "medium",
     children: ["This link uses the medium text size"],
+    onPress: () => alert("onPress()"),
+  },
+};
+
+export const LargeLink: Story = {
+  ...LinkTemplate,
+  args: {
+    size: "large",
+    children: ["This likn uses the large text size"],
     onPress: () => alert("onPress()"),
   },
 };

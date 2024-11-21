@@ -50,10 +50,15 @@ Consult the React Aria documentation for [more information about events and rout
 
 ### Size
 
-Use the `size` prop to choose between `small` (default) and `medium` sizes:
+Use the `size` prop to choose between `small`, `medium` and `large` sizes:
 
 <Canvas of={LinkStories.SmallLink} />
 <Canvas of={LinkStories.MediumLink} />
+<Canvas of={LinkStories.LargeLink} />
+
+If no `size` prop is passed, it will default to `medium`.
+
+Links will also respect generic text sizing like bold or italics, and will match the correct heading style if enclosed in an element like `<h1>`.
 
 ### Link icons
 
