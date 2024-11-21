@@ -2,17 +2,40 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--typography-font-families-bc-sans);
-}
-
 main {
   margin: 0 auto;
   padding: 2rem;
   max-width: 1100px;
+}
+
+/* Typography */
+h1 {
+  font: var(--typography-bold-h1);
+}
+h2 {
+  font: var(--typography-bold-h2);
+}
+h3 {
+  font: var(--typography-bold-h3);
+}
+h4 {
+  font: var(--typography-bold-h4);
+}
+h5 {
+  font: var(--typography-bold-h5);
+}
+h6 {
+  font: var(--typography-bold-h6);
+}
+
+p {
+  font: var(--typography-regular-body);
+}
+
+p b {
+  font: var(--typography-bold-body);
+}
+
+p i {
+  font: var(--typography-italic-body);
 }

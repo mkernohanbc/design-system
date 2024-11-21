@@ -211,6 +211,32 @@ function App() {
       <AlertBannerPage />
       <main>
         <h1>Components</h1>
+        <div>
+          <h2>Generic text content</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            eget pretium urna. Nunc pulvinar gravida tellus et malesuada. Nam eu
+            luctus diam. Vestibulum ornare nisl orci, nec commodo odio mollis
+            non.{" "}
+            <b>
+              Sed in tincidunt nisl, et efficitur nibh. Vestibulum vestibulum
+              congue tempus.
+            </b>
+          </p>
+          <p>
+            Vestibulum tincidunt cursus dui, vel commodo sapien pharetra
+            gravida. Nulla pretium augue diam, nec commodo est vehicula nec.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+            per inceptos himenaeos. Nam ullamcorper ac nisl a consequat.{" "}
+            <i>Donec finibus lacinia ex, vitae laoreet ipsum rutrum non.</i>
+          </p>
+          <p>
+            This is a paragraph of generically-styled body text. Its purpose is
+            to text how the link component behaves when used inline. I am going
+            to add a <Link href="#">link component</Link> here and hope that it
+            works smoothly.
+          </p>
+        </div>
         <ButtonPage />
         <ButtonGroupPage />
         <CalloutPage />
