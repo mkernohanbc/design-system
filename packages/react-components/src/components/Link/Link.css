@@ -4,8 +4,7 @@
   align-items: center;
   gap: var(--layout-margin-xsmall);
   color: var(--typography-color-link);
-  text-decoration: underline;
-  text-underline-offset: var(--layout-padding-xsmall);
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -25,6 +24,8 @@
 /* Hover state */
 .bcds-react-aria-Link[data-hovered] {
   color: var(--surface-color-border-active);
+  text-decoration: underline;
+  text-underline-offset: var(--layout-padding-xsmall);
 }
 
 /* Focus state */
