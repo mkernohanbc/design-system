@@ -1,0 +1,40 @@
+{/* Menu.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as MenuStories from "./Menu.stories";
+
+<Meta of={MenuStories} />
+
+# Menu
+
+<Subtitle>
+  The menu component displays a collapsible list of items in a dropdown menu.
+</Subtitle>
+
+<Source
+  code={`import { Menu, MenuItem } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Learn more about working with the select component:
+
+- [Usage and best practice guidance](https://www2.gov.bc.ca/gov/content?id=94129932F3384565A638034B69E0C943)
+- [View the select component in Figma](https://www2.gov.bc.ca/gov/content?id=8E36BE1D10E04A17B0CD4D913FA7AC43#designers)
+
+This component is based on [React Aria Menu](https://react-spectrum.adobe.com/react-aria/Menu.html).
+
+## Controls
+
+<Primary of={MenuStories} />
+<Controls of={MenuStories.MenuTemplate} />
