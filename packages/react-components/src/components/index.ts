@@ -30,6 +30,7 @@ export { default as SvgExclamationIcon } from "./Icons/SvgExclamationIcon";
 export { default as SvgExclamationCircleIcon } from "./Icons/SvgExclamationCircleIcon";
 export { default as SvgChevronUpIcon } from "./Icons/SvgChevronUpIcon";
 export { default as SvgChevronDownIcon } from "./Icons/SvgChevronDownIcon";
+export { default as SvgChevronRightIcon } from "./Icons/SvgChevronRightIcon";
 export { default as SvgCloseIcon } from "./Icons/SvgCloseIcon";
 export { default as SvgInfoIcon } from "./Icons/SvgInfoIcon";
 export { default as SvgMenuIcon } from "./Icons/SvgMenuIcon";

@@ -4,6 +4,7 @@ import {
 } from "react-aria-components";
 
 import "./MenuItem.css";
+import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 
 export interface MenuItemProps extends ReactAriaMenuItemProps {
   size?: "small" | "medium";
@@ -22,11 +23,7 @@ export default function MenuItem({ size = "medium", ...props }: MenuItemProps) {
       {({ hasSubmenu }) => (
         <>
           {props.children}
-          {hasSubmenu && (
-            <svg className="chevron" viewBox="0 0 24 24">
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          )}
+          {hasSubmenu && <SvgChevronRightIcon />}
         </>
       )}
     </ReactAriaMenuItem>
