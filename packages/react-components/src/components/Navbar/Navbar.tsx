@@ -2,6 +2,7 @@ import "./Navbar.css";
 import React from "react";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Menu from "../Menu";
+import { MenuTrigger } from "../Menu";
 import SvgMenuIcon from "../Icons/SvgMenuIcon";
 import Button from "../Button";
 import MenuItem from "../MenuItem";
@@ -32,20 +33,19 @@ export default function Navbar({ children, ...props }: NavbarProps) {
           </>
         ) : (
           <>
-            <Menu
-              triggerElement={
-                <Button size="small" variant="secondary">
-                  <SvgMenuIcon />
-                  Menu
-                </Button>
-              }
-            >
-              {childrenArray.map((child, index) => (
-                <React.Fragment key={index}>
-                  <MenuItem>{child}</MenuItem>
-                </React.Fragment>
-              ))}
-            </Menu>
+            <MenuTrigger>
+              <Button size="small" variant="secondary">
+                <SvgMenuIcon />
+                Menu
+              </Button>
+              <Menu>
+                {childrenArray.map((child, index) => (
+                  <React.Fragment key={index}>
+                    <MenuItem>{child}</MenuItem>
+                  </React.Fragment>
+                ))}
+              </Menu>
+            </MenuTrigger>
           </>
         )}
       </nav>

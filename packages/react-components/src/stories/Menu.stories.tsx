@@ -1,6 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button, Link, Menu, MenuItem, SvgMenuIcon } from "../components";
+import {
+  Button,
+  Link,
+  Menu,
+  MenuItem,
+  MenuTrigger,
+  SvgMenuIcon,
+} from "../components";
 import { MenuProps } from "../components/Menu";
 
 const meta = {
@@ -12,11 +19,6 @@ const meta = {
       control: { type: "object" },
       description: "Expects an array of `MenuItem` components",
     },
-    triggerElement: {
-      control: { type: "object" },
-      description:
-        "The component (commonly a `Button`) that activates the menu",
-    },
   },
 } satisfies Meta<typeof Menu>;
 
@@ -25,16 +27,18 @@ type Story = StoryObj<typeof meta>;
 
 export const MenuTemplate: Story = {
   args: {
-    triggerElement: [
-      <Button variant="secondary">
-        Open the menu <SvgMenuIcon />
-      </Button>,
-    ],
     children: [
       <MenuItem>
         <Link href="#">Item 1</Link>
       </MenuItem>,
     ],
   },
-  render: ({ ...args }: MenuProps<object>) => <Menu {...args} />,
+  render: ({ ...args }: MenuProps<object>) => (
+    <MenuTrigger>
+      <Button variant="secondary">
+        Open the menu <SvgMenuIcon />
+      </Button>
+      <Menu {...args} />
+    </MenuTrigger>
+  ),
 };
