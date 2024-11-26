@@ -1,0 +1,69 @@
+{/* Separator.mdx */}
+
+import {
+  Canvas,
+  Controls,
+  Meta,
+  Primary,
+  Source,
+  Story,
+  Subtitle,
+} from "@storybook/blocks";
+
+import * as SeparatorStories from "./Separator.stories";
+
+<Meta of={SeparatorStories} />
+
+# Separator
+
+<Subtitle>Visual divider to create sections within content</Subtitle>
+
+<Source
+  code={`import { Separator } from "@bcgov/design-system-react-components";`}
+  language="typescript"
+/>
+
+## Usage and resources
+
+Separator is a utility component that enables you to create visual separation between sections of content. It uses React Aria's [useSeparator API](https://react-spectrum.adobe.com/react-aria/useSeparator.html) to provide accessibility support.
+
+The Separator component is designed to be used within flexbox layouts. It renders an `<hr>` element when horizontal, and a `<span>` (with the [ARIA "separator" role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)) when vertical.
+
+## Controls
+
+<Primary of={SeparatorStories} />
+<Controls of={SeparatorStories.SeparatorTemplate} />
+
+## Configuration
+
+### Styling
+
+If needed, you can apply additional styling to a separator by passing the `style` prop, or by targeting the `.bcds-react-aria-Separator` class in your CSS.
+
+### Orientation
+
+Set the `orientation` prop to `horizontal` or `vertical`, depending on your use case.
+
+Orientation set to `horizontal`:
+
+<Canvas of={SeparatorStories.SeparatorTemplate} />
+
+Orientation set to `vertical`:
+
+<Canvas of={SeparatorStories.VerticalSeparator} />
+
+### Size
+
+Use the `size` prop to control the thickness of the separator. If no `size` prop is passed, it defaults to `small`.
+
+#### Small
+
+<Canvas of={SeparatorStories.SmallSeparator} />
+
+#### Medium
+
+<Canvas of={SeparatorStories.MediumSeparator} />
+
+#### Large
+
+<Canvas of={SeparatorStories.LargeSeparator} />
