@@ -1,22 +1,19 @@
 import "./Navbar.css";
 import React from "react";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
-import Menu from "../Menu";
-import { MenuTrigger } from "../Menu";
-import SvgMenuIcon from "../Icons/SvgMenuIcon";
 import Button from "../Button";
+import Menu from "../Menu";
 import MenuItem from "../MenuItem";
+import { MenuTrigger } from "../Menu";
+import Separator from "../Separator";
+import SvgMenuIcon from "../Icons/SvgMenuIcon";
 
 export interface NavbarProps extends React.PropsWithChildren {
   children?: React.ReactNode;
 }
 
 export default function Navbar({ children, ...props }: NavbarProps) {
-  /* Add separators between children */
   const childrenArray = React.Children.toArray(children);
-  const Separator = () => (
-    <span className="bcds-Navbar--Separator" role="separator" />
-  );
   /* Collapse navbar at smaller screen sizes */
   const { isSmall } = useWindowDimensions();
   return (
@@ -27,7 +24,9 @@ export default function Navbar({ children, ...props }: NavbarProps) {
             {childrenArray.map((child, index) => (
               <React.Fragment key={index}>
                 {child}
-                {index < childrenArray.length - 1 && <Separator />}
+                {index < childrenArray.length - 1 && (
+                  <Separator orientation="vertical" />
+                )}
               </React.Fragment>
             ))}
           </>

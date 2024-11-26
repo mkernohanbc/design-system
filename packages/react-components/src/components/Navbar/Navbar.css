@@ -19,10 +19,3 @@
   max-width: 1100px;
   padding: var(--layout-padding-small) var(--layout-padding-none);
 }
-
-.bcds-Navbar--Separator {
-  width: var(--layout-border-width-small);
-  height: 1.5rem;
-  background-color: var(--surface-color-border-default);
-  border-radius: var(--layout-border-radius-small);
-}

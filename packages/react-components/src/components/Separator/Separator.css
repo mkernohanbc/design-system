@@ -7,10 +7,6 @@
 }
 
 /* Vertical */
-.bcds-react-aria-Separator.vertical {
-  margin: var(--layout-margin-small) var(--layout-margin-none);
-}
-
 .bcds-react-aria-Separator.vertical.small {
   width: var(--layout-border-width-small);
 }
@@ -24,10 +20,6 @@
 }
 
 /* Horizontal */
-.bcds-react-aria-Separator.horizontal {
-  margin: var(--layout-margin-none) var(--layout-margin-small);
-}
-
 .bcds-react-aria-Separator.horizontal.small {
   height: var(--layout-border-width-small);
 }
