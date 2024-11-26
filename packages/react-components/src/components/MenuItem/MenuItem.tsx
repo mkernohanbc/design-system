@@ -14,7 +14,7 @@ export default function MenuItem({ ...props }: ReactAriaMenuItemProps) {
     <ReactAriaMenuItem
       {...props}
       textValue={textValue}
-      className="bcds-react-aria-Menu-Item ${size}"
+      className="bcds-react-aria-Menu-Item"
     >
       {({ hasSubmenu }) => (
         <>
