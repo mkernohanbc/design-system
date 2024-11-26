@@ -6,6 +6,7 @@ import {
   Menu,
   MenuItem,
   MenuTrigger,
+  SubmenuTrigger,
   SvgMenuIcon,
 } from "../components";
 import { MenuProps } from "../components/Menu";
@@ -31,6 +32,36 @@ export const MenuTemplate: Story = {
       <MenuItem>
         <Link href="#">Item 1</Link>
       </MenuItem>,
+    ],
+  },
+  render: ({ ...args }: MenuProps<object>) => (
+    <MenuTrigger>
+      <Button variant="secondary">
+        Open the menu <SvgMenuIcon />
+      </Button>
+      <Menu {...args} />
+    </MenuTrigger>
+  ),
+};
+
+export const MenuWithSubmenu: Story = {
+  args: {
+    children: [
+      <MenuItem>
+        <Link href="#">Item 1</Link>
+      </MenuItem>,
+      <MenuItem>
+        <Link href="#">Item 2</Link>
+      </MenuItem>,
+      [
+        <SubmenuTrigger>
+          <MenuItem>Submenu</MenuItem>
+          <Menu>
+            <MenuItem>Submenu item 1</MenuItem>
+            <MenuItem>Submenu item 2</MenuItem>
+          </Menu>
+        </SubmenuTrigger>,
+      ],
     ],
   },
   render: ({ ...args }: MenuProps<object>) => (

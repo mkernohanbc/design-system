@@ -1,12 +1,16 @@
 import {
   MenuTrigger,
   Menu as ReactAriaMenu,
-  MenuProps,
+  MenuProps as ReactAriaMenuProps,
   Popover as ReactAriaPopover,
   SubmenuTrigger,
 } from "react-aria-components";
 
 import "./Menu.css";
+
+export interface MenuProps<T extends object> extends ReactAriaMenuProps<T> {
+  triggerElement?: React.ReactNode;
+}
 
 export default function Menu<T extends object>({
   children,
