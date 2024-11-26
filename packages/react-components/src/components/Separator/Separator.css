@@ -3,22 +3,14 @@
   border: none;
   border-radius: var(--layout-border-radius-small);
   background-color: var(--surface-color-border-default);
+  align-self: stretch;
 }
 
-/* Horizontal orientation */
-.bcds-react-aria-Separator.horizontal.small {
-  height: var(--layout-border-width-small);
+/* Vertical */
+.bcds-react-aria-Separator.vertical {
+  margin: var(--layout-margin-small) var(--layout-margin-none);
 }
 
-.bcds-react-aria-Separator.horizontal.medium {
-  height: var(--layout-border-width-medium);
-}
-
-.bcds-react-aria-Separator.horizontal.large {
-  height: var(--layout-border-width-large);
-}
-
-/* Vertical orientation */
 .bcds-react-aria-Separator.vertical.small {
   width: var(--layout-border-width-small);
 }
@@ -29,4 +21,21 @@
 
 .bcds-react-aria-Separator.vertical.large {
   width: var(--layout-border-width-large);
+}
+
+/* Horizontal */
+.bcds-react-aria-Separator.horizontal {
+  margin: var(--layout-margin-none) var(--layout-margin-small);
+}
+
+.bcds-react-aria-Separator.horizontal.small {
+  height: var(--layout-border-width-small);
+}
+
+.bcds-react-aria-Separator.horizontal.medium {
+  height: var(--layout-border-width-medium);
+}
+
+.bcds-react-aria-Separator.horizontal.large {
+  height: var(--layout-border-width-large);
 }

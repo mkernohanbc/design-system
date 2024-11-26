@@ -14,6 +14,16 @@ export default function Separator({
   orientation = "horizontal",
   ...props
 }: SeparatorProps) {
+  /* Creates a <span> instead of an <hr> in vertical orientation */
+  if (orientation === "vertical") {
+    return (
+      <ReactAriaSeparator
+        className={`bcds-react-aria-Separator ${size} ${orientation}`}
+        elementType="span"
+        {...props}
+      />
+    );
+  }
   return (
     <ReactAriaSeparator
       className={`bcds-react-aria-Separator ${size} ${orientation}`}
