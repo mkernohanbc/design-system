@@ -7,17 +7,16 @@ import "./Separator.css";
 
 export interface SeparatorProps extends ReactAriaSeparatorProps {
   size?: "small" | "medium" | "large";
-  color?: "light" | "dark";
 }
 
 export default function Separator({
   size = "small",
-  color = "light",
+  orientation = "horizontal",
   ...props
 }: SeparatorProps) {
   return (
     <ReactAriaSeparator
-      className={`bcds-react-aria-Separator ${size} ${color}`}
+      className={`bcds-react-aria-Separator ${size} ${orientation}`}
       {...props}
     />
   );

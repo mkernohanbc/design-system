@@ -1,1 +1,1 @@
-export { default, MenuTrigger, SubmenuTrigger, MenuSeparator } from "./Menu";
+export { default, MenuTrigger, SubmenuTrigger } from "./Menu";
