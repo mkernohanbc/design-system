@@ -19,6 +19,7 @@ import {
   MenuItem,
   MenuTrigger,
   SubmenuTrigger,
+  Separator,
   SvgInfoIcon,
   SvgMenuIcon,
 } from "@/components";
@@ -62,9 +63,11 @@ function App() {
           </Button>
           <Menu>
             <MenuItem href="#">Item 1 has a longish name</MenuItem>
+            <Separator />
             <MenuItem href="#" size="small">
               Item 2 uses the "small" size
             </MenuItem>
+            <Separator />
             <MenuItem href="#" isDisabled>
               Item 3 is disabled
             </MenuItem>

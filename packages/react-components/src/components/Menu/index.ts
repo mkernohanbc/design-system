@@ -1,2 +1,1 @@
-export { default, MenuTrigger, SubmenuTrigger } from "./Menu";
-export type { MenuProps } from "./Menu";
+export { default, MenuTrigger, SubmenuTrigger, MenuSeparator } from "./Menu";

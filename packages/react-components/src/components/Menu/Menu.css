@@ -17,11 +17,6 @@
 }
 
 /* Section headers */
-.bcds-react-aria-Menu > .react-aria-Header {
+.bcds-react-aria-Menu .react-aria-Header {
   font: var(--typography-bold-large-body);
-}
-
-/* Separators */
-.bcds-react-aria-Menu > .react-aria-Separator {
-  color: var(--surface-color-border-medium);
 }

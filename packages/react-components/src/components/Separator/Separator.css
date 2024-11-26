@@ -1,0 +1,21 @@
+/* Color */
+.bcds-react-aria-Separator.light {
+  background-color: var(--surface-color-border-default);
+}
+
+.bcds-react-aria-Separator.dark {
+  background-color: var(--surface-color-border-dark);
+}
+
+/* Size */
+.bcds-react-aria-Separator.small {
+  height: var(--layout-border-width-small);
+}
+
+.bcds-react-aria-Separator.medium {
+  height: var(--layout-border-width-medium);
+}
+
+.bcds-react-aria-Separator.large {
+  height: var(--layout-border-width-large);
+}
