@@ -15,3 +15,13 @@
     --trigger-width
   ); /* Variable provided by Menu component: https://react-spectrum.adobe.com/react-aria/Menu.html#popover-1 */
 }
+
+/* Section headers */
+.bcds-react-aria-Menu > .react-aria-Header {
+  font: var(--typography-bold-large-body);
+}
+
+/* Separators */
+.bcds-react-aria-Menu > .react-aria-Separator {
+  color: var(--surface-color-border-medium);
+}

@@ -2,12 +2,14 @@
   color: var(--typography-color-secondary);
   display: inline-flex;
   gap: var(--layout-margin-xsmall);
-  align-items: center;
 }
 
+/* Icon displayed when an item has a submenu */
 .bcds-react-aria-Menu-Item > svg {
   width: var(--icons-size-xsmall);
   height: var(--icons-size-xsmall);
+  padding: var(--layout-padding-hair);
+  align-self: center;
 }
 
 /* Link styling */
@@ -19,6 +21,7 @@ a.bcds-react-aria-Menu-Item {
 
 .bcds-react-aria-Menu-Item[data-hovered] {
   color: var(--surface-color-border-active);
+  background-color: var(--surface-color-menus-hover);
 }
 
 .bcds-react-aria-Menu-Item[data-disabled] {
