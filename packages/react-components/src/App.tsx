@@ -62,15 +62,14 @@ function App() {
             Menu <SvgMenuIcon />
           </Button>
           <Menu>
-            <MenuItem href="#">Item 1 has a longish name</MenuItem>
-            <Separator />
-            <MenuItem href="#" size="small">
-              Item 2 uses the "small" size
+            <MenuItem href="#">
+              <Link href="#">Item 1 with long name</Link>
             </MenuItem>
-            <Separator />
+            <MenuItem href="#">Item 2</MenuItem>
             <MenuItem href="#" isDisabled>
               Item 3 is disabled
             </MenuItem>
+            <Separator />
             <SubmenuTrigger>
               <MenuItem>Submenu</MenuItem>
               <Menu>

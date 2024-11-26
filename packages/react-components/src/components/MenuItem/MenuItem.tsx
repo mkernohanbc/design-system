@@ -6,11 +6,7 @@ import {
 import "./MenuItem.css";
 import SvgChevronRightIcon from "../Icons/SvgChevronRightIcon";
 
-export interface MenuItemProps extends ReactAriaMenuItemProps {
-  size?: "small" | "medium";
-}
-
-export default function MenuItem({ size = "medium", ...props }: MenuItemProps) {
+export default function MenuItem({ ...props }: ReactAriaMenuItemProps) {
   const textValue =
     props.textValue ||
     (typeof props.children === "string" ? props.children : undefined);
@@ -18,7 +14,7 @@ export default function MenuItem({ size = "medium", ...props }: MenuItemProps) {
     <ReactAriaMenuItem
       {...props}
       textValue={textValue}
-      className={`bcds-react-aria-Menu-Item ${size}`}
+      className="bcds-react-aria-Menu-Item ${size}"
     >
       {({ hasSubmenu }) => (
         <>

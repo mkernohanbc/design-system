@@ -1,4 +1,5 @@
 .bcds-react-aria-Menu-Item {
+  font: var(--typography-regular-body);
   color: var(--typography-color-secondary);
   display: inline-flex;
   gap: var(--layout-margin-xsmall);
@@ -12,12 +13,14 @@
   align-self: center;
 }
 
-/* Link styling */
-a.bcds-react-aria-Menu-Item {
-  color: var(--typography-color-link);
-}
-
 /* States */
+
+.bcds-react-aria-Menu-Item[data-focus-visible] {
+  outline: solid var(--layout-border-width-medium)
+    var(--surface-color-border-active);
+  outline-offset: var(--layout-margin-xsmall);
+  border-radius: var(--layout-border-radius-small);
+}
 
 .bcds-react-aria-Menu-Item[data-hovered] {
   color: var(--surface-color-border-active);
@@ -27,13 +30,4 @@ a.bcds-react-aria-Menu-Item {
 .bcds-react-aria-Menu-Item[data-disabled] {
   color: var(--typography-color-disabled);
   cursor: not-allowed;
-}
-
-/* Sizing */
-.bcds-react-aria-Menu-Item.medium {
-  font: var(--typography-regular-body);
-}
-
-.bcds-react-aria-Menu-Item.small {
-  font: var(--typography-regular-small-body);
 }

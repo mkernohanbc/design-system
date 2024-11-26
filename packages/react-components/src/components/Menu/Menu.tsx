@@ -8,14 +8,10 @@ import {
 
 import "./Menu.css";
 
-export interface MenuProps<T extends object> extends ReactAriaMenuProps<T> {
-  triggerElement?: React.ReactNode;
-}
-
 export default function Menu<T extends object>({
   children,
   ...props
-}: MenuProps<T>) {
+}: ReactAriaMenuProps<T>) {
   return (
     <ReactAriaPopover className="bcds-react-aria-Popover">
       <ReactAriaMenu className="bcds-react-aria-Menu" {...props}>
