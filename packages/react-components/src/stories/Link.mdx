@@ -48,6 +48,10 @@ If a link has an `href`, it renders as an `<a>` element. Otherwise, it will rend
 
 Consult the React Aria documentation for [more information about events and routing](https://react-spectrum.adobe.com/react-aria/Link.html#events).
 
+### Styling
+
+Link ships with styling based on the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342). Pass a CSS class with the `className` prop to override a link's styles with your own.
+
 ### Size
 
 Use the `size` prop to choose between `small`, `medium` and `large` sizes:
@@ -56,9 +60,9 @@ Use the `size` prop to choose between `small`, `medium` and `large` sizes:
 <Canvas of={LinkStories.MediumLink} />
 <Canvas of={LinkStories.LargeLink} />
 
-Text size and styling align to the [B.C. Design System typescale](https://www2.gov.bc.ca/gov/content?id=72C2CD6E05494C84B9A072DD9C6A5342). If no `size` prop is passed, it will default to `medium`.
+If no `size` prop is passed, it will default to `medium`.
 
-Links will also respect generic text sizing like bold or italics. They will match the correct heading style from the design system typescale if enclosed in an element like `<h2>`:
+Links will match the correct heading style from the design system typescale if enclosed in an element like `<h2>`:
 
 <Canvas of={LinkStories.LinkInHeading} />
 
