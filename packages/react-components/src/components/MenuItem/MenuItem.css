@@ -2,6 +2,7 @@
   color: var(--typography-color-secondary);
   display: inline-flex;
   gap: var(--layout-margin-xsmall);
+  cursor: pointer;
 }
 
 /* Link styling */
@@ -9,7 +10,6 @@ a.bcds-react-aria-Menu-Item {
   color: var(--typography-color-link);
   text-decoration: underline;
   text-underline-offset: var(--layout-padding-hair);
-  cursor: pointer;
 }
 
 a.bcds-react-aria-Menu-Item[data-hovered] {

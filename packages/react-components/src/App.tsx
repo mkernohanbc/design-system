@@ -17,6 +17,8 @@ import {
   Link,
   Menu,
   MenuItem,
+  MenuSection,
+  MenuSectionHeader,
   MenuTrigger,
   SubmenuTrigger,
   Separator,
@@ -53,20 +55,26 @@ function App() {
             Menu <SvgMenuIcon />
           </Button>
           <Menu>
-            <MenuItem href="https://gov.bc.ca/designsystem" target="blank">
-              Item 1 with long name
-            </MenuItem>
-            <MenuItem>Item 2</MenuItem>
-            <MenuItem isDisabled>Item 3 is disabled</MenuItem>
+            <MenuSection>
+              <MenuSectionHeader>Header</MenuSectionHeader>
+              <MenuItem href="https://gov.bc.ca/designsystem" target="blank">
+                Item 1 with long name
+              </MenuItem>
+              <MenuItem>Item 2</MenuItem>
+              <MenuItem isDisabled>Item 3 is disabled</MenuItem>
+            </MenuSection>
             <Separator />
-            <SubmenuTrigger>
-              <MenuItem>Submenu</MenuItem>
-              <Menu>
-                <MenuItem>Subitem 1</MenuItem>
-                <MenuItem>Subitem 2</MenuItem>
-                <MenuItem>Subitem 3</MenuItem>
-              </Menu>
-            </SubmenuTrigger>
+            <MenuSection>
+              <MenuSectionHeader>Header</MenuSectionHeader>
+              <SubmenuTrigger>
+                <MenuItem>Submenu</MenuItem>
+                <Menu>
+                  <MenuItem>Subitem 1</MenuItem>
+                  <MenuItem>Subitem 2</MenuItem>
+                  <MenuItem>Subitem 3</MenuItem>
+                </Menu>
+              </SubmenuTrigger>
+            </MenuSection>
           </Menu>
         </MenuTrigger>
       </Header>

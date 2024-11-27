@@ -2,6 +2,8 @@ import {
   MenuTrigger,
   Menu as ReactAriaMenu,
   MenuProps as ReactAriaMenuProps,
+  MenuSection,
+  Header as MenuSectionHeader,
   Popover as ReactAriaPopover,
   SubmenuTrigger,
 } from "react-aria-components";
@@ -21,4 +23,4 @@ export default function Menu<T extends object>({
   );
 }
 
-export { MenuTrigger, SubmenuTrigger };
+export { MenuTrigger, SubmenuTrigger, MenuSection, MenuSectionHeader };
