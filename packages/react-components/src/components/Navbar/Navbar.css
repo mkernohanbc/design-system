@@ -1,7 +1,6 @@
 .bcds-Navbar {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   padding: var(--layout-padding-none) var(--layout-padding-small);
   justify-content: space-around;
   background-color: var(--surface-color-menus-default);
@@ -18,12 +17,11 @@
 }
 
 .bcds-Navbar--List ul {
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--layout-margin-small);
-  list-style-type: none;
-  align-items: flex-start;
   padding: var(--layout-padding-none);
   margin: var(--layout-margin-none);
 }
