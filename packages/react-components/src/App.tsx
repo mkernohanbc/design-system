@@ -48,15 +48,6 @@ function App() {
   return (
     <>
       <Header title="B.C. Design System Kitchen Sink">
-        <Link href="#" size="small" iconLeft={<SvgInfoIcon />}>
-          Test medium link
-        </Link>
-        <Link href="#" size="small" iconLeft={<SvgInfoIcon />}>
-          Test link
-        </Link>
-        <Link href="#" size="small" isDisabled iconLeft={<SvgInfoIcon />}>
-          Test disabled link
-        </Link>
         <MenuTrigger>
           <Button size="small" variant="secondary">
             Menu <SvgMenuIcon />
@@ -171,6 +162,7 @@ function App() {
         </div>
       </Header>
       <Header
+        title="Header with navbar"
         subnavItems={[
           <Link href="#" size="small">
             Nav item 1

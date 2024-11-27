@@ -9,16 +9,20 @@ export default function Navbar({ children, ...props }: NavbarProps) {
   const childrenArray = React.Children.toArray(children);
   return (
     <div className="bcds-Navbar" {...props}>
-      <nav className="bcds-Navbar--Container">
-        {childrenArray.map((child, index) => (
-          <React.Fragment key={index}>
-            {child}
-            {index < childrenArray.length - 1 && (
-              <Separator orientation="vertical" />
-            )}
-          </React.Fragment>
-        ))}
-      </nav>
+      <div className="bcds-Navbar--Container">
+        <nav className="bcds-Navbar--List">
+          <ul>
+            {childrenArray.map((child, index) => (
+              <React.Fragment key={index}>
+                <li>{child}</li>
+                {index < childrenArray.length - 1 && (
+                  <Separator orientation="vertical" />
+                )}
+              </React.Fragment>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 }

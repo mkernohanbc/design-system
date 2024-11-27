@@ -10,12 +10,20 @@
 }
 
 .bcds-Navbar--Container {
-  display: inline-flex;
-  flex-direction: row;
-  gap: var(--layout-margin-small);
+  display: flex;
   align-items: center;
   flex-grow: 1;
-  flex-wrap: wrap;
   max-width: 1100px;
   padding: var(--layout-padding-small) var(--layout-padding-none);
+}
+
+.bcds-Navbar--List ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--layout-margin-small);
+  list-style-type: none;
+  align-items: flex-start;
+  padding: var(--layout-padding-none);
+  margin: var(--layout-margin-none);
 }
