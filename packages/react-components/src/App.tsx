@@ -187,6 +187,15 @@ function App() {
           <Link href="#" size="small">
             Nav item 5
           </Link>,
+          <Link href="#" size="small">
+            Nav item 6
+          </Link>,
+          <Link href="#" size="small">
+            Nav item 7
+          </Link>,
+          <Link href="#" size="small">
+            Nav item 8
+          </Link>,
         ]}
       />
       <AlertBannerPage />
