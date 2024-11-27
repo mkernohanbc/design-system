@@ -62,13 +62,11 @@ function App() {
             Menu <SvgMenuIcon />
           </Button>
           <Menu>
-            <MenuItem href="#">
-              <Link href="#">Item 1 with long name</Link>
+            <MenuItem href="https://gov.bc.ca/designsystem" target="blank">
+              Item 1 with long name
             </MenuItem>
-            <MenuItem href="#">Item 2</MenuItem>
-            <MenuItem href="#" isDisabled>
-              Item 3 is disabled
-            </MenuItem>
+            <MenuItem>Item 2</MenuItem>
+            <MenuItem isDisabled>Item 3 is disabled</MenuItem>
             <Separator />
             <SubmenuTrigger>
               <MenuItem>Submenu</MenuItem>

@@ -15,6 +15,7 @@ export interface NavbarProps extends React.PropsWithChildren {
 export default function Navbar({ children, ...props }: NavbarProps) {
   const childrenArray = React.Children.toArray(children);
   /* Collapse navbar at smaller screen sizes */
+  /* NEED TO REFACTOR, <LINK> INSIDE <MENUITEM> BREAKS */
   const { isSmall } = useWindowDimensions();
   return (
     <div className="bcds-Navbar" {...props}>
