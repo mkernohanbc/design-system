@@ -52,11 +52,11 @@ function App() {
       <Header title="B.C. Design System Kitchen Sink">
         <MenuTrigger>
           <Button size="small" variant="secondary">
-            Menu <SvgMenuIcon />
+            Explore the site <SvgMenuIcon />
           </Button>
           <Menu>
             <MenuSection>
-              <MenuSectionHeader>Header</MenuSectionHeader>
+              <MenuSectionHeader>Section 1</MenuSectionHeader>
               <MenuItem href="https://gov.bc.ca/designsystem" target="blank">
                 Item 1 with long name
               </MenuItem>
@@ -65,7 +65,7 @@ function App() {
             </MenuSection>
             <Separator />
             <MenuSection>
-              <MenuSectionHeader>Header</MenuSectionHeader>
+              <MenuSectionHeader>Section 2</MenuSectionHeader>
               <SubmenuTrigger>
                 <MenuItem>Submenu</MenuItem>
                 <Menu>

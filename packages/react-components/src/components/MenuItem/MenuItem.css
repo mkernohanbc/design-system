@@ -44,7 +44,6 @@ a.bcds-react-aria-Menu-Item[data-hovered] {
 
 .bcds-react-aria-Menu-Item[data-hovered] {
   color: var(--surface-color-border-active);
-  background-color: var(--surface-color-menus-hover);
 }
 
 .bcds-react-aria-Menu-Item[data-disabled] {
