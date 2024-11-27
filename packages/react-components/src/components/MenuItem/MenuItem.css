@@ -1,8 +1,16 @@
 .bcds-react-aria-Menu-Item {
-  font: var(--typography-regular-body);
   color: var(--typography-color-secondary);
   display: inline-flex;
   gap: var(--layout-margin-xsmall);
+}
+
+/* Sizing */
+.bcds-react-aria-Menu-Item.small {
+  font: var(--typography-regular-small-body);
+}
+
+.bcds-react-aria-Menu-Item.medium {
+  font: var(--typography-regular-body);
 }
 
 /* Icon displayed when an item has a submenu */
