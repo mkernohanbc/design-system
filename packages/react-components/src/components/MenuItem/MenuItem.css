@@ -4,6 +4,18 @@
   gap: var(--layout-margin-xsmall);
 }
 
+/* Link styling */
+a.bcds-react-aria-Menu-Item {
+  color: var(--typography-color-link);
+  text-decoration: underline;
+  text-underline-offset: var(--layout-padding-hair);
+  cursor: pointer;
+}
+
+a.bcds-react-aria-Menu-Item[data-hovered] {
+  color: var(--surface-color-border-active);
+}
+
 /* Sizing */
 .bcds-react-aria-Menu-Item.small {
   font: var(--typography-regular-small-body);
