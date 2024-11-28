@@ -26,6 +26,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const MenuItems = [
+  { id: 1, name: "Item 1" },
+  { id: 2, name: "Item 2" },
+  { id: 3, name: "Item 3" },
+  { id: 4, name: "Item 4" },
+];
+
 export const MenuTemplate: Story = {
   args: {
     children: [
@@ -47,18 +54,14 @@ export const MenuTemplate: Story = {
 export const MenuWithSubmenu: Story = {
   args: {
     children: [
-      <MenuItem>
-        <Link href="#">Item 1</Link>
-      </MenuItem>,
-      <MenuItem>
-        <Link href="#">Item 2</Link>
-      </MenuItem>,
+      <MenuItem id="1">Item 1</MenuItem>,
+      <MenuItem id="2">Item 2</MenuItem>,
       [
         <SubmenuTrigger>
           <MenuItem>Submenu</MenuItem>
           <Menu>
-            <MenuItem>Submenu item 1</MenuItem>
-            <MenuItem>Submenu item 2</MenuItem>
+            <MenuItem id="1">Submenu item 1</MenuItem>
+            <MenuItem id="2">Submenu item 2</MenuItem>
           </Menu>
         </SubmenuTrigger>,
       ],
@@ -70,6 +73,19 @@ export const MenuWithSubmenu: Story = {
         Open the menu <SvgMenuIcon />
       </Button>
       <Menu {...args} />
+    </MenuTrigger>
+  ),
+};
+
+export const MenuWithDynamicItems: Story = {
+  ...MenuTemplate.args,
+  args: { items: MenuItems },
+  render: () => (
+    <MenuTrigger>
+      <Button>Open the menu</Button>
+      <Menu items={MenuItems}>
+        {(item) => <MenuItem>{item.name}</MenuItem>}
+      </Menu>
     </MenuTrigger>
   ),
 };

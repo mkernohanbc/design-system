@@ -1,12 +1,4 @@
-import {
-  Menu as ReactAriaMenu,
-  MenuItem as ReactAriaMenuItem,
-  MenuTrigger as ReactAriaMenuTrigger,
-  Popover as ReactAriaPopover,
-} from "react-aria-components";
-
 import "./App.css";
-import * as tokens from "@bcgov/design-tokens/js";
 import "@bcgov/bc-sans/css/BC_Sans.css";
 
 import {
@@ -24,6 +16,7 @@ import {
   Separator,
   SvgInfoIcon,
   SvgMenuIcon,
+  SvgChevronDownIcon,
 } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
@@ -47,9 +40,28 @@ import {
 function App() {
   const { isMedium } = useWindowDimensions();
 
+  const MenuItems = [
+    { id: 1, name: "Item 1" },
+    { id: 2, name: "Item 2" },
+    { id: 3, name: "Item 3", href: "https://example.org" },
+    { id: 4, name: "Item 4" },
+  ];
+
   return (
     <>
       <Header title="B.C. Design System Kitchen Sink">
+        <MenuTrigger>
+          <Button size="small" variant="secondary">
+            Menu with dynamic list <SvgChevronDownIcon />
+          </Button>
+          <Menu items={MenuItems}>
+            {(item) => (
+              <MenuItem id={item.id} href={item.href}>
+                {item.name}
+              </MenuItem>
+            )}
+          </Menu>
+        </MenuTrigger>
         <MenuTrigger>
           <Button size="small" variant="secondary">
             Explore the site <SvgMenuIcon />
@@ -57,21 +69,27 @@ function App() {
           <Menu>
             <MenuSection>
               <MenuSectionHeader>Section 1</MenuSectionHeader>
-              <MenuItem href="https://gov.bc.ca/designsystem" target="blank">
+              <MenuItem
+                href="https://gov.bc.ca/designsystem"
+                target="blank"
+                id="1"
+              >
                 Item 1 with long name
               </MenuItem>
-              <MenuItem>Item 2</MenuItem>
-              <MenuItem isDisabled>Item 3 is disabled</MenuItem>
+              <MenuItem id="2">Item 2</MenuItem>
+              <MenuItem id="3" isDisabled>
+                Item 3 is disabled
+              </MenuItem>
             </MenuSection>
             <Separator />
             <MenuSection>
               <MenuSectionHeader>Section 2</MenuSectionHeader>
               <SubmenuTrigger>
-                <MenuItem>Submenu</MenuItem>
+                <MenuItem id="4">Submenu</MenuItem>
                 <Menu>
-                  <MenuItem>Subitem 1</MenuItem>
-                  <MenuItem>Subitem 2</MenuItem>
-                  <MenuItem>Subitem 3</MenuItem>
+                  <MenuItem id="1">Subitem 1</MenuItem>
+                  <MenuItem id="2">Subitem 2</MenuItem>
+                  <MenuItem id="3">Subitem 3</MenuItem>
                 </Menu>
               </SubmenuTrigger>
             </MenuSection>
@@ -108,64 +126,31 @@ function App() {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                font: tokens.typographyRegularBody,
+                gap: "var(--layout-margin-medium)",
                 listStyle: "none",
-                paddingLeft: 0,
               }}
             >
-              <li
-                style={{
-                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                }}
-              >
-                Link
+              <li>
+                <Link href="#">Link component 1</Link>
               </li>
-              <li
-                style={{
-                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                }}
-              >
-                Link
+              <li>
+                <Link href="2">Link component 1</Link>
               </li>
-              <li
-                style={{
-                  padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                }}
-              >
-                Link
+              <li>
+                <Link href="#">Link component 3</Link>
               </li>
             </ul>
           ) : (
-            <ReactAriaMenuTrigger>
+            <MenuTrigger>
               <Button size="small" variant="secondary">
                 Menu <SvgMenuIcon />
               </Button>
-              <ReactAriaPopover>
-                <ReactAriaMenu>
-                  <ReactAriaMenuItem
-                    style={{
-                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                    }}
-                  >
-                    Link
-                  </ReactAriaMenuItem>
-                  <ReactAriaMenuItem
-                    style={{
-                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                    }}
-                  >
-                    Link
-                  </ReactAriaMenuItem>
-                  <ReactAriaMenuItem
-                    style={{
-                      padding: `${tokens.layoutPaddingNone} ${tokens.layoutPaddingMedium}`,
-                    }}
-                  >
-                    Link
-                  </ReactAriaMenuItem>
-                </ReactAriaMenu>
-              </ReactAriaPopover>
-            </ReactAriaMenuTrigger>
+              <Menu>
+                <MenuItem href="#">Menu item component 1</MenuItem>
+                <MenuItem href="#">Menu item component 2</MenuItem>
+                <MenuItem href="#">Menu item component 3</MenuItem>
+              </Menu>
+            </MenuTrigger>
           )}
         </div>
       </Header>
