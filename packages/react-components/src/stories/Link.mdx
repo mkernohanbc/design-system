@@ -68,13 +68,10 @@ Links will match the correct heading style from the design system typescale if e
 
 ### Link icons
 
-The link component supports optional icon slots to the left and right of the link label:
+You can pass SVG graphics into the `children` slot to add icons to a link:
 
 <Canvas of={LinkStories.LinkWithLeftIcon} />
 <Canvas of={LinkStories.LinkWithRightIcon} />
-
-You can pass an icon to one of these slots and leave the `children` slot empty to create an icon-only link:
-
 <Canvas of={LinkStories.IconOnlyLink} />
 
 **Note**: when using an icon-only link, you must also pass an accessible label for assistive technologies using the `ariaLabel` prop.

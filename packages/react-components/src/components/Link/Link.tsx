@@ -6,10 +6,6 @@ import {
 import "./Link.css";
 
 export interface LinkProps extends ReactAriaLinkProps {
-  /* Left icon slot */
-  iconLeft?: React.ReactElement;
-  /* Right icon slot */
-  iconRight?: React.ReactElement;
   /* Text size */
   size?: "small" | "medium" | "large";
   /* ARIA label */
@@ -19,8 +15,6 @@ export interface LinkProps extends ReactAriaLinkProps {
 export default function Link({
   children,
   size = "medium",
-  iconLeft,
-  iconRight,
   ariaLabel,
   ...props
 }: LinkProps) {
@@ -30,13 +24,7 @@ export default function Link({
       aria-label={ariaLabel}
       {...props}
     >
-      {iconLeft && (
-        <span className="bcds-react-aria-Link--Icon">{iconLeft}</span>
-      )}
-      <>{children}</>
-      {iconRight && (
-        <span className="bcds-react-aria-Link--Icon">{iconRight}</span>
-      )}
+      {children}
     </ReactAriaLink>
   );
 }

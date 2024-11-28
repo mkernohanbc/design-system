@@ -9,7 +9,8 @@
   cursor: pointer;
 }
 
-.bcds-react-aria-Link--Icon {
+/* Icon styling */
+.bcds-react-aria-Link > svg {
   display: inline-flex;
   align-items: center;
   align-self: center;

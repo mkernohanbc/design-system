@@ -18,14 +18,6 @@ const meta = {
       control: { type: "radio" },
       description: "Sets text size",
     },
-    iconLeft: {
-      control: { type: "object" },
-      description: "Populates left icon (optional)",
-    },
-    iconRight: {
-      control: { type: "object" },
-      description: "Populates right icon (optional)",
-    },
     isDisabled: {
       control: { type: "boolean" },
       description: "Whether a link is enabled or disabled",
@@ -94,8 +86,7 @@ export const LinkWithLeftIcon: Story = {
   ...LinkTemplate,
   args: {
     size: "small",
-    iconLeft: <SvgInfoIcon />,
-    children: ["This link has an icon"],
+    children: [<SvgInfoIcon />, "This link has an icon"],
     onPress: () => alert("onPress()"),
   },
 };
@@ -104,8 +95,7 @@ export const LinkWithRightIcon: Story = {
   ...LinkTemplate,
   args: {
     size: "small",
-    iconRight: <SvgInfoIcon />,
-    children: ["This link has an icon"],
+    children: ["This link has an icon", <SvgInfoIcon />],
     onPress: () => alert("onPress()"),
   },
 };
@@ -113,7 +103,7 @@ export const LinkWithRightIcon: Story = {
 export const IconOnlyLink: Story = {
   ...LinkTemplate,
   args: {
-    iconRight: <SvgInfoIcon />,
+    children: [<SvgInfoIcon />],
     ariaLabel: "Information",
     onPress: () => alert("onPress()"),
   },

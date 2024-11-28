@@ -17,8 +17,8 @@ export default function LinkPage() {
         The Link component can be used to populate navigation bars, as in the
         examples above, or to create inline hyperlinks within content. A link
         can have{" "}
-        <Link href="#" iconLeft={<SvgInfoIcon />}>
-          an icon next to it
+        <Link href="#">
+          <SvgInfoIcon /> an icon next to it
         </Link>
         .
       </p>

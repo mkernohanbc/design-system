@@ -134,7 +134,7 @@ function App() {
                 <Link href="#">Link component 1</Link>
               </li>
               <li>
-                <Link href="2">Link component 1</Link>
+                <Link href="#">Link component 2</Link>
               </li>
               <li>
                 <Link href="#">Link component 3</Link>
@@ -163,7 +163,8 @@ function App() {
           <Link href="#" size="small">
             Nav item 2
           </Link>,
-          <Link href="#" size="small" iconLeft={<SvgInfoIcon />}>
+          <Link href="#" size="small">
+            <SvgInfoIcon />
             Nav item 3
           </Link>,
           <Link href="#" size="small">
