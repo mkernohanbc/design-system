@@ -18,7 +18,8 @@ export default function LinkPage() {
         examples above, or to create inline hyperlinks within content. A link
         can have{" "}
         <Link href="#">
-          <SvgInfoIcon /> an icon next to it
+          <SvgInfoIcon />
+          an icon next to it
         </Link>
         .
       </p>

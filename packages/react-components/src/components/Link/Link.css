@@ -1,8 +1,6 @@
 .bcds-react-aria-Link {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: var(--layout-margin-xsmall);
+  display: inline;
+  justify-items: normal;
   color: var(--typography-color-link);
   text-decoration: underline;
   text-underline-offset: var(--layout-padding-hair);
@@ -11,9 +9,8 @@
 
 /* Icon styling */
 .bcds-react-aria-Link > svg {
-  display: inline-flex;
-  align-items: center;
-  align-self: center;
+  justify-self: baseline;
+  vertical-align: middle;
 }
 
 /* Small size */
