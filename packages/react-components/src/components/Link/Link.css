@@ -1,16 +1,21 @@
 .bcds-react-aria-Link {
-  display: inline;
-  justify-items: normal;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--layout-margin-xsmall);
   color: var(--typography-color-link);
   text-decoration: underline;
   text-underline-offset: var(--layout-padding-hair);
   cursor: pointer;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 /* Icon styling */
 .bcds-react-aria-Link > svg {
-  justify-self: baseline;
-  vertical-align: middle;
+  align-self: center;
 }
 
 /* Small size */
