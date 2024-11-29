@@ -3,6 +3,7 @@ import AlertBannerWithVariants from "./AlertBanner/AlertBannerVariants";
 import ButtonPage from "./Button";
 import ButtonGroupPage from "./ButtonGroup";
 import CalloutPage from "./Callout";
+import CalloutWithVariants from "./Callout/CalloutWithVariants";
 import CheckboxGroupPage from "./CheckboxGroup";
 import InlineAlertPage from "./InlineAlert";
 import LinkPage from "./Link";
@@ -21,6 +22,7 @@ export {
   ButtonPage,
   ButtonGroupPage,
   CalloutPage,
+  CalloutWithVariants,
   CheckboxGroupPage,
   InlineAlertPage,
   LinkPage,

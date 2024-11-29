@@ -23,7 +23,7 @@ import {
   AlertBannerWithVariants,
   ButtonPage,
   ButtonGroupPage,
-  CalloutPage,
+  CalloutWithVariants,
   CheckboxGroupPage,
   InlineAlertPage,
   LinkPage,
@@ -190,7 +190,7 @@ function App() {
         <LinkPage />
         <ButtonPage />
         <ButtonGroupPage />
-        <CalloutPage />
+        <CalloutWithVariants />
         <CheckboxGroupPage />
         <SwitchPage />
         <InlineAlertPage />

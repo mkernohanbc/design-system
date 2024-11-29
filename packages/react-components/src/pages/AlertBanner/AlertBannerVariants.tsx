@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Key } from "react-aria-components"; // Import Key type
+import { Key } from "react-aria-components";
 import { AlertBanner, Select } from "@/components";
 
 type AlertVariant = "info" | "success" | "warning" | "danger" | "black";
