@@ -1,0 +1,154 @@
+/* Structure */
+#root,
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header,
+footer {
+  flex-shrink: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface-color-background-light-gray);
+}
+
+main,
+section.content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--layout-padding-xlarge) var(--layout-padding-none);
+}
+
+/* Full-width sections */
+div.light-blue {
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface-color-background-light-blue);
+}
+
+div.dark-blue {
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface-color-background-dark-blue);
+}
+
+/* Layout */
+.component {
+  background-color: var(--surface-color-background-white);
+  padding: var(--layout-padding-medium);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-medium);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-large);
+  background-color: var(--surface-color-background-white);
+  padding: var(--layout-padding-medium);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-medium);
+  border-radius: var(--layout-border-radius-medium);
+}
+
+.form .fieldset {
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-margin-small);
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-small);
+  padding: var(--layout-padding-medium);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--typography-color-primary);
+}
+
+h1 {
+  font: var(--typography-bold-h1);
+}
+
+h2 {
+  font: var(--typography-bold-h2);
+}
+
+h3 {
+  font: var(--typography-bold-h3);
+}
+
+h4 {
+  font: var(--typography-bold-h4);
+}
+
+h5 {
+  font: var(--typography-bold-h5);
+}
+
+h6 {
+  font: var(--typography-bold-h6);
+}
+
+main,
+footer {
+  /* Body content */
+  font: var(--typography-regular-body);
+  color: var(--typography-color-secondary);
+  /* Large font */
+  .large {
+    font: var(--typography-regular-large-body);
+    /* Bold */
+  }
+  b,
+  strong {
+    font: var(--typography-bold-body);
+  }
+  /* Italics */
+  i,
+  em {
+    font: var(--typography-italic-body);
+  }
+  /* Hyperlinks */
+  a {
+    color: var(--typography-color-link);
+    text-decoration: underline;
+    text-underline-offset: var(--layout-padding-hair);
+    cursor: pointer;
+  }
+  /* Code samples */
+  code {
+    font-family: monospace;
+  }
+}
+
+/* Inverted type colours */
+.invert {
+  color: var(--typography-color-secondary-invert);
+}
+
+h1.invert,
+h2.invert,
+h3.invert,
+h4.invert,
+h5.invert,
+h6.invert {
+  color: var(--typography-color-primary-invert);
+}

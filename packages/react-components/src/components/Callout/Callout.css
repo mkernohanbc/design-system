@@ -1,6 +1,6 @@
 .bcds-Callout {
   display: flex;
-  width: 100%;
+  box-sizing: border-box;
   padding: var(--layout-padding-medium) var(--layout-padding-large);
 }
 
