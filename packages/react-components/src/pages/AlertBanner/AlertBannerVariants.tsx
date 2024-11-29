@@ -18,11 +18,11 @@ const AlertBannerWithVariants = () => {
         }
         size="small"
         items={[
-          { id: "info", label: "Info" },
-          { id: "success", label: "Success" },
-          { id: "warning", label: "Warning" },
-          { id: "danger", label: "Danger" },
-          { id: "black", label: "Black" },
+          { id: "info", label: "Info theme" },
+          { id: "success", label: "Success theme" },
+          { id: "warning", label: "Warning theme" },
+          { id: "danger", label: "Danger theme" },
+          { id: "black", label: "Black theme" },
         ]}
       />
     </AlertBanner>
