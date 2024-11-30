@@ -20,7 +20,7 @@ import {
 } from "@/components";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import {
-  AlertBannerWithVariants,
+  AlertBannerPage,
   ButtonPage,
   ButtonGroupPage,
   CalloutPage,
@@ -49,7 +49,6 @@ function App() {
 
   return (
     <>
-      <AlertBannerWithVariants />
       <Header title="B.C. Design System Kitchen Sink">
         <MenuTrigger>
           <Button size="small" variant="secondary">
@@ -185,6 +184,7 @@ function App() {
           </Link>,
         ]}
       />
+      <AlertBannerPage />
       <main>
         <h1>Components</h1>
         <LinkPage />
