@@ -14,11 +14,8 @@ import {
   InlineAlert,
   Radio,
   RadioGroup,
-  SvgInfoIcon,
   TextField,
   TextArea,
-  Tooltip,
-  TooltipTrigger,
 } from "@bcgov/design-system-react-components";
 
 // import path for components not yet released
@@ -30,6 +27,7 @@ import {
   ButtonWithVariants,
   CalloutWithVariants,
   Dialogs,
+  InfoButton,
   InlineAlertWithVariants,
   IntroAlert,
 } from "./pages";
@@ -42,22 +40,13 @@ function App() {
     <>
       <AlertBannerWithVariants />
       <Header title="B.C. Design System Demo App" titleElement="h1">
-        <TooltipTrigger>
-          <Button
-            isIconButton
-            variant="link"
-            aria-label="This button has a tooltip"
-          >
-            <SvgInfoIcon />
-          </Button>
-          <Tooltip placement="left">This is a tooltip</Tooltip>
-        </TooltipTrigger>
-        <Link
-          className="bcds-react-aria-Button primary"
-          href="https://gov.bc.ca/designsystem"
-        >
-          Explore the design system
-        </Link>
+        <InfoButton buttonVariant="link">
+          The{" "}
+          <Link href="https://www2.gov.bc.ca/gov/content?id=84633C48F00A4C77BE9584EBFC9A39BF">
+            Header
+          </Link>{" "}
+          component communicates authorship and provides navigation.
+        </InfoButton>
       </Header>
       <main>
         <Container>
@@ -77,20 +66,46 @@ function App() {
           </Row>
           <Row>
             <Col sm={6}>
-              <h3>Buttons</h3>
+              <Row style={{ alignItems: "baseline" }}>
+                <Col sm={1}>
+                  <InfoButton>
+                    The{" "}
+                    <Link href="https://www2.gov.bc.ca/gov/content?id=4C51732F99054326A3E2DB0B82576DD4">
+                      Button
+                    </Link>{" "}
+                    component enables the user to easily identify and take an
+                    action.
+                  </InfoButton>
+                </Col>
+                <Col sm={5}>
+                  <h3>Buttons</h3>
+                </Col>
+              </Row>
               <ButtonWithVariants />
             </Col>
             <Col sm={6}>
-              <h3>Dialogs</h3>
+              <Row style={{ alignItems: "baseline" }}>
+                <Col sm={1}>
+                  <InfoButton>
+                    <Link href="https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C">
+                      Dialogs
+                    </Link>{" "}
+                    display important information or actions to the user,
+                    overlaid over the rest of the interface.
+                  </InfoButton>
+                </Col>
+                <Col sm={5}>
+                  <h3>Dialogs</h3>
+                </Col>
+              </Row>
+
               <Dialogs />
             </Col>
           </Row>
           <Row>
             <Col sm={6}></Col>
             <Col sm={6}>
-              <h3>
-                Form <SvgInfoIcon />
-              </h3>
+              <h3>Form</h3>
               <Form className="form">
                 <InlineAlert
                   variant="warning"

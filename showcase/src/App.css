@@ -152,3 +152,15 @@ h5.invert,
 h6.invert {
   color: var(--typography-color-primary-invert);
 }
+
+/* Popovers */
+.popover {
+  font: var(--typography-regular-small-body);
+  color: var(--typography-color-secondary);
+  a {
+    color: var(--typography-color-link);
+    text-decoration: underline;
+    text-underline-offset: var(--layout-padding-hair);
+    cursor: pointer;
+  }
+}
