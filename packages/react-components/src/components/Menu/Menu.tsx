@@ -4,10 +4,10 @@ import {
   MenuProps as ReactAriaMenuProps,
   MenuSection,
   Header as MenuSectionHeader,
-  Popover as ReactAriaPopover,
   SubmenuTrigger,
 } from "react-aria-components";
 
+import Popover from "../Popover";
 import "./Menu.css";
 
 export default function Menu<T extends object>({
@@ -15,11 +15,11 @@ export default function Menu<T extends object>({
   ...props
 }: ReactAriaMenuProps<T>) {
   return (
-    <ReactAriaPopover className="bcds-react-aria-Popover">
+    <Popover>
       <ReactAriaMenu className="bcds-react-aria-Menu" {...props}>
         {children}
       </ReactAriaMenu>
-    </ReactAriaPopover>
+    </Popover>
   );
 }
 
