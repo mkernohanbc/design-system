@@ -40,7 +40,14 @@ function App() {
     <>
       <AlertBannerWithVariants />
       <Header title="B.C. Design System Demo App" titleElement="h1">
-        <InfoButton buttonVariant="link">
+        <InfoButton buttonVariant="link" popoverPlacement="top">
+          The{" "}
+          <Link href="https://www2.gov.bc.ca/gov/content?id=84633C48F00A4C77BE9584EBFC9A39BF">
+            Header
+          </Link>{" "}
+          component communicates authorship and provides navigation.
+        </InfoButton>
+        <InfoButton buttonVariant="link" popoverPlacement="bottom">
           The{" "}
           <Link href="https://www2.gov.bc.ca/gov/content?id=84633C48F00A4C77BE9584EBFC9A39BF">
             Header
@@ -67,8 +74,17 @@ function App() {
           <Row>
             <Col sm={6}>
               <Row style={{ alignItems: "baseline" }}>
-                <Col sm={1}>
-                  <InfoButton>
+                <Col
+                  sm={6}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "var(--layout-margin-small)",
+                    alignItems: "center",
+                  }}
+                >
+                  <h3>Buttons</h3>
+                  <InfoButton popoverPlacement="right">
                     The{" "}
                     <Link href="https://www2.gov.bc.ca/gov/content?id=4C51732F99054326A3E2DB0B82576DD4">
                       Button
@@ -77,16 +93,22 @@ function App() {
                     action.
                   </InfoButton>
                 </Col>
-                <Col sm={5}>
-                  <h3>Buttons</h3>
-                </Col>
               </Row>
               <ButtonWithVariants />
             </Col>
             <Col sm={6}>
               <Row style={{ alignItems: "baseline" }}>
-                <Col sm={1}>
-                  <InfoButton>
+                <Col
+                  sm={6}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "var(--layout-margin-small)",
+                    alignItems: "center",
+                  }}
+                >
+                  <h3>Dialogs</h3>
+                  <InfoButton popoverPlacement="left">
                     <Link href="https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C">
                       Dialogs
                     </Link>{" "}
@@ -94,11 +116,7 @@ function App() {
                     overlaid over the rest of the interface.
                   </InfoButton>
                 </Col>
-                <Col sm={5}>
-                  <h3>Dialogs</h3>
-                </Col>
               </Row>
-
               <Dialogs />
             </Col>
           </Row>

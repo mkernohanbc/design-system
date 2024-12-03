@@ -10,6 +10,7 @@ import { Text } from "react-aria-components";
 
 export interface InfoButtonProps extends React.PropsWithChildren {
   buttonVariant?: "primary" | "secondary" | "tertiary" | "link";
+  popoverPlacement?: "top" | "bottom" | "left" | "right";
   isTooltipDisabled?: boolean;
 }
 
@@ -18,6 +19,7 @@ import { Popover } from "../../../../packages/react-components/src/components";
 
 export default function InfoButton({
   buttonVariant = "link",
+  popoverPlacement = "bottom",
   isTooltipDisabled = false,
   children,
   ...props
@@ -47,10 +49,10 @@ export default function InfoButton({
           </Tooltip>
         )}
         <Popover
+          placement={popoverPlacement}
           triggerRef={triggerRef}
           isOpen={isOpen}
           onOpenChange={setOpen}
-          offset={20}
         >
           <Text className="popover">{children}</Text>
         </Popover>

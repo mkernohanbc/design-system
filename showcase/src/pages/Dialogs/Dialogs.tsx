@@ -47,7 +47,7 @@ const Dialogs = () => {
             {selectedVariant === "alert" ? (
               <Button>Open an alert dialog</Button>
             ) : (
-              <Button>Open a generic dialog</Button>
+              <Button variant="secondary">Open a generic dialog</Button>
             )}
             <Modal isDismissable>
               {selectedVariant === "alert" ? (

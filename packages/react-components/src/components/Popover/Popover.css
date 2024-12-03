@@ -1,6 +1,7 @@
 .bcds-react-aria-Popover {
   background-color: var(--surface-color-forms-default);
-  border: 1px solid var(--surface-color-border-default);
+  border: var(--layout-border-width-small) solid
+    var(--surface-color-border-default);
   border-radius: var(--layout-border-radius-medium);
   box-shadow: var(--surface-shadow-medium);
   box-sizing: border-box;
@@ -8,4 +9,77 @@
   width: var(
     --trigger-width
   ); /* Variable provided by Menu component: https://react-spectrum.adobe.com/react-aria/Menu.html#popover-1 */
+}
+
+/* Arrow */
+.bcds-react-aria-Popover > .bcds-react-aria-OverlayArrow {
+  color: var(--surface-color-border-default);
+}
+
+/* Arrow placement */
+.bcds-react-aria-Popover[data-placement="top"] > .bcds-react-aria-OverlayArrow,
+.bcds-react-aria-Popover[data-placement="bottom"]
+  > .bcds-react-aria-OverlayArrow {
+  height: 9px;
+  width: 19px;
+}
+
+.bcds-react-aria-Popover[data-placement="right"]
+  > .bcds-react-aria-OverlayArrow,
+.bcds-react-aria-Popover[data-placement="left"]
+  > .bcds-react-aria-OverlayArrow {
+  height: 19px;
+  width: 9px;
+}
+
+/* Top placement */
+.bcds-react-aria-Popover[data-placement="top"] {
+  margin-bottom: 9px; /* Offset is equal to the depth of the OverlayArrow */
+}
+.bcds-react-aria-Popover[data-placement="top"] > .bcds-react-aria-OverlayArrow {
+  margin-top: -9px;
+}
+.bcds-react-aria-Popover[data-placement="top"]
+  > .bcds-react-aria-OverlayArrow
+  > svg {
+  transform: rotate(180deg);
+}
+
+/* Bottom placement */
+.bcds-react-aria-Popover[data-placement="bottom"] {
+  margin-top: 9px;
+}
+.bcds-react-aria-Popover[data-placement="bottom"]
+  > .bcds-react-aria-OverlayArrow {
+  margin-bottom: 9px;
+}
+
+/* Right placement */
+.bcds-react-aria-Popover[data-placement="right"] {
+  margin-left: 9px;
+}
+.bcds-react-aria-Popover[data-placement="right"]
+  > .bcds-react-aria-OverlayArrow {
+  margin-top: -4.5px;
+  margin-right: 4.5px;
+}
+.bcds-react-aria-Popover[data-placement="right"]
+  > .bcds-react-aria-OverlayArrow
+  > svg {
+  transform: rotate(-90deg);
+}
+
+/* Left placement */
+.bcds-react-aria-Popover[data-placement="left"] {
+  margin-right: 9px;
+}
+.bcds-react-aria-Popover[data-placement="left"]
+  > .bcds-react-aria-OverlayArrow {
+  margin-top: -4.5px;
+  margin-left: -4.5px;
+}
+.bcds-react-aria-Popover[data-placement="left"]
+  > .bcds-react-aria-OverlayArrow
+  > svg {
+  transform: rotate(90deg);
 }
