@@ -24,38 +24,39 @@ const InlineAlertWithVariants = () => {
 
   return (
     <>
-      <div className="component">
-        <Row style={{ display: "flex", alignItems: "center" }}>
-          <Col sm={3}>
-            <Select
-              selectedKey={selectedVariant}
-              onSelectionChange={(key: Key) =>
-                setSelectedVariant(key as InlineAlertVariant)
-              }
-              size="small"
-              label="Pick a variant"
-              description="Controls inline alert via useState"
-              items={[
-                { id: "info", label: "Info theme" },
-                { id: "success", label: "Success theme" },
-                { id: "warning", label: "Warning theme" },
-                { id: "danger", label: "Danger theme" },
-              ]}
+      <Row
+        className="component"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <Col>
+          <Select
+            selectedKey={selectedVariant}
+            onSelectionChange={(key: Key) =>
+              setSelectedVariant(key as InlineAlertVariant)
+            }
+            size="small"
+            label="Pick a variant"
+            description="Controls inline alert via useState"
+            items={[
+              { id: "info", label: "Info theme" },
+              { id: "success", label: "Success theme" },
+              { id: "warning", label: "Warning theme" },
+              { id: "danger", label: "Danger theme" },
+            ]}
+          />
+        </Col>
+        <Col>
+          {alert.alert1 && (
+            <InlineAlert
+              variant={selectedVariant}
+              title="Inline alert component"
+              description="Use the dropdown menu to toggle between available themes."
+              isCloseable
+              onClose={() => handleClose("alert1")}
             />
-          </Col>
-          <Col sm={9}>
-            {alert.alert1 && (
-              <InlineAlert
-                variant={selectedVariant}
-                title="Inline alert component"
-                description="Use the dropdown menu to toggle between available themes."
-                isCloseable
-                onClose={() => handleClose("alert1")}
-              />
-            )}
-          </Col>
-        </Row>
-      </div>
+          )}
+        </Col>
+      </Row>
     </>
   );
 };

@@ -16,50 +16,42 @@ const ButtonWithVariants = () => {
 
   return (
     <>
-      <div className="component">
-        <Row style={{ display: "flex", alignItems: "center" }}>
-          <Col
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "var(--layout-margin-small)",
-            }}
+      <Row className="component">
+        <Col>
+          <Select
+            selectedKey={selectedVariant}
+            onSelectionChange={(key: Key) =>
+              setSelectedVariant(key as ButtonVariant)
+            }
+            size="small"
+            label="Pick a variant"
+            description="Controls button via useState"
+            items={[
+              { id: "primary", label: "Primary" },
+              { id: "secondary", label: "Secondary" },
+              { id: "tertiary", label: "Tertiary" },
+              { id: "link", label: "Link" },
+            ]}
+          />
+          <Switch
+            defaultSelected
+            onChange={(isSelected) => setIsButtonEnabled(isSelected)}
           >
-            <Select
-              selectedKey={selectedVariant}
-              onSelectionChange={(key: Key) =>
-                setSelectedVariant(key as ButtonVariant)
-              }
-              size="small"
-              label="Pick a variant"
-              description="Controls button via useState"
-              items={[
-                { id: "primary", label: "Primary" },
-                { id: "secondary", label: "Secondary" },
-                { id: "tertiary", label: "Tertiary" },
-                { id: "link", label: "Link" },
-              ]}
-            />
-            <Switch
-              defaultSelected
-              onChange={(isSelected) => setIsButtonEnabled(isSelected)}
-            >
-              Enable/disable the button
-            </Switch>
-          </Col>
-          <Col style={{ display: "flex", justifyContent: "space-around" }}>
-            <Button
-              variant={selectedVariant}
-              isDisabled={!isButtonEnabled}
-              onPress={() =>
-                alert("Button events are configured using this onPress() event")
-              }
-            >
-              This is a button
-            </Button>
-          </Col>
-        </Row>
-      </div>
+            Enable/disable the button
+          </Switch>
+        </Col>
+        <Col>
+          <Button
+            variant={selectedVariant}
+            isDisabled={!isButtonEnabled}
+            onPress={() =>
+              alert("Button events are configured using this onPress() event")
+            }
+          >
+            This is a button
+          </Button>
+        </Col>
+      </Row>
     </>
   );
 };

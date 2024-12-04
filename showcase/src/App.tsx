@@ -40,13 +40,6 @@ function App() {
     <>
       <AlertBannerWithVariants />
       <Header title="B.C. Design System Demo App" titleElement="h1">
-        <InfoButton buttonVariant="link" popoverPlacement="top">
-          The{" "}
-          <Link href="https://www2.gov.bc.ca/gov/content?id=84633C48F00A4C77BE9584EBFC9A39BF">
-            Header
-          </Link>{" "}
-          component communicates authorship and provides navigation.
-        </InfoButton>
         <InfoButton buttonVariant="link" popoverPlacement="bottom">
           The{" "}
           <Link href="https://www2.gov.bc.ca/gov/content?id=84633C48F00A4C77BE9584EBFC9A39BF">
@@ -58,32 +51,32 @@ function App() {
       <main>
         <Container>
           <Row>
-            <Col sm={12}>
+            <Col>
               <IntroAlert />
             </Col>
           </Row>
           <Row>
-            <Col sm={12}>
-              <h2>Components</h2>
-              <h3>Inline alert</h3>
+            <Col>
+              <Row>
+                <h2>Components</h2>
+              </Row>
+              <Row>
+                <h3>Inline alert</h3>
+              </Row>
               <InlineAlertWithVariants />
-              <h3>Callout</h3>
+              <Row>
+                <h3>Callout</h3>
+              </Row>
               <CalloutWithVariants />
             </Col>
           </Row>
-          <Row>
-            <Col sm={6}>
-              <Row style={{ alignItems: "baseline" }}>
-                <Col
-                  sm={6}
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "var(--layout-margin-small)",
-                    alignItems: "center",
-                  }}
-                >
+          <Row direction="row" gutterWidth={72}>
+            <Col>
+              <Row align="center">
+                <Col sm={3}>
                   <h3>Buttons</h3>
+                </Col>
+                <Col sm={3}>
                   <InfoButton popoverPlacement="right">
                     The{" "}
                     <Link href="https://www2.gov.bc.ca/gov/content?id=4C51732F99054326A3E2DB0B82576DD4">
@@ -94,29 +87,21 @@ function App() {
                   </InfoButton>
                 </Col>
               </Row>
-              <ButtonWithVariants />
-            </Col>
-            <Col sm={6}>
-              <Row style={{ alignItems: "baseline" }}>
-                <Col
-                  sm={6}
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "var(--layout-margin-small)",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3>Dialogs</h3>
-                  <InfoButton popoverPlacement="left">
-                    <Link href="https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C">
-                      Dialogs
-                    </Link>{" "}
-                    display important information or actions to the user,
-                    overlaid over the rest of the interface.
-                  </InfoButton>
+              <Row>
+                <Col>
+                  <ButtonWithVariants />
                 </Col>
               </Row>
+            </Col>
+            <Col>
+              <h3>Dialogs</h3>
+              <InfoButton popoverPlacement="left">
+                <Link href="https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C">
+                  Dialogs
+                </Link>{" "}
+                display important information or actions to the user, overlaid
+                over the rest of the interface.
+              </InfoButton>
               <Dialogs />
             </Col>
           </Row>
