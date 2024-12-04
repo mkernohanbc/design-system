@@ -24,8 +24,6 @@ import {
   IntroAlert,
 } from "./pages";
 
-import { Link, Text } from "react-aria-components";
-
 function App() {
   return (
     <>
@@ -33,9 +31,9 @@ function App() {
       <Header title="B.C. Design System Demo App" titleElement="h1">
         <InfoButton buttonVariant="link" popoverPlacement="bottom">
           The{" "}
-          <Link href="https://www2.gov.bc.ca/gov/content?id=84633C48F00A4C77BE9584EBFC9A39BF">
+          <a href="https://www2.gov.bc.ca/gov/content?id=84633C48F00A4C77BE9584EBFC9A39BF">
             Header
-          </Link>{" "}
+          </a>{" "}
           component communicates authorship and provides navigation.
         </InfoButton>
       </Header>
@@ -51,40 +49,36 @@ function App() {
         <div className="row">
           <div className="col">
             <h3>Introduction</h3>
-            <Text>
+            <p>
               The{" "}
-              <Link href="https://gov.bc.ca/designsystem">
-                B.C. Design System
-              </Link>{" "}
+              <a href="https://gov.bc.ca/designsystem">B.C. Design System</a>{" "}
               gives public sector teams a set of building blocks to build
               consistent, accessible user interfaces. This app illustrates how
               design system components look and behave, both in isolation and
               when composed together to form more complex design and interaction
               patterns.
-            </Text>
+            </p>
           </div>
           <div className="col">
             <h3>Explore the design system</h3>
             <ul>
               <li>
-                <Link href="https://gov.bc.ca/designsystem">
-                  Docs and guidance
-                </Link>
+                <a href="https://gov.bc.ca/designsystem">Docs and guidance</a>
               </li>
               <li>
-                <Link href="https://designsystem.gov.bc.ca/react-components">
+                <a href="https://designsystem.gov.bc.ca/react-components">
                   Browse components in Storybook
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="https://www.npmjs.com/package/@bcgov/design-system-react-components">
+                <a href="https://www.npmjs.com/package/@bcgov/design-system-react-components">
                   Install the npm package
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="https://www.figma.com/community/file/1326994583954765832/b-c-design-system">
+                <a href="https://www.figma.com/community/file/1326994583954765832/b-c-design-system">
                   Get the Figma library
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -92,9 +86,9 @@ function App() {
         <div className="row">
           <h3>Inline alert</h3>
           <InfoButton popoverPlacement="right">
-            <Link href="https://www2.gov.bc.ca/gov/content?id=B2B838CAA1EE4552941925894286258F">
+            <a href="https://www2.gov.bc.ca/gov/content?id=B2B838CAA1EE4552941925894286258F">
               Inline alerts
-            </Link>{" "}
+            </a>{" "}
             display an important contextual notification or message to the user.
           </InfoButton>
         </div>
@@ -104,9 +98,9 @@ function App() {
         <div className="row">
           <h3>Callout</h3>
           <InfoButton popoverPlacement="right">
-            <Link href="https://www2.gov.bc.ca/gov/content?id=84AA0EAD468F41149F125E63F91A402F">
+            <a href="https://www2.gov.bc.ca/gov/content?id=84AA0EAD468F41149F125E63F91A402F">
               Callouts
-            </Link>{" "}
+            </a>{" "}
             highlight important sections of static content.
           </InfoButton>
         </div>
@@ -116,9 +110,9 @@ function App() {
         <div className="row">
           <h3>Buttons</h3>
           <InfoButton popoverPlacement="right">
-            <Link href="https://www2.gov.bc.ca/gov/content?id=4C51732F99054326A3E2DB0B82576DD4">
+            <a href="https://www2.gov.bc.ca/gov/content?id=4C51732F99054326A3E2DB0B82576DD4">
               Buttons
-            </Link>{" "}
+            </a>{" "}
             enable the user to easily identify and take an action.
           </InfoButton>
         </div>
@@ -128,9 +122,9 @@ function App() {
         <div className="row">
           <h3>Dialogs</h3>
           <InfoButton popoverPlacement="right">
-            <Link href="https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C">
+            <a href="https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C">
               Dialogs
-            </Link>{" "}
+            </a>{" "}
             provide important information in an overlay over the rest of the
             interface.
           </InfoButton>
@@ -144,9 +138,9 @@ function App() {
               <h3>Form</h3>
               <InfoButton popoverPlacement="right">
                 The{" "}
-                <Link href="https://designsystem.gov.bc.ca/react-components/?path=/docs/utility-form-wrapper--docs">
+                <a href="https://designsystem.gov.bc.ca/react-components/?path=/docs/utility-form-wrapper--docs">
                   Form
-                </Link>{" "}
+                </a>{" "}
                 component wraps around input components to provide data
                 validation and submission support.
               </InfoButton>
@@ -162,12 +156,12 @@ function App() {
       </main>
       <Footer
         contact={
-          <Text>
+          <p>
             The B.C. Design System is maintained by Service BC & Government
             Digital Experience, part of the Ministry of Citizens' Services. To
             contact the design system team, email{" "}
             <a href="mailto:designsystem@gov.bc.ca">designsystem@gov.bc.ca</a>.
-          </Text>
+          </p>
         }
         links={
           <FooterLinks
