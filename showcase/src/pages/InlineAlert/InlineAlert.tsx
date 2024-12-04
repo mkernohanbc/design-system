@@ -23,7 +23,7 @@ const InlineAlertWithVariants = () => {
 
   return (
     <div className="row component">
-      <div className="col">
+      <div className="col" style={{ width: "40%" }}>
         <Select
           selectedKey={selectedVariant}
           onSelectionChange={(key: Key) =>

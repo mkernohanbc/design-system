@@ -27,7 +27,13 @@ const ExampleForm = () => {
     >
       <div className="row">
         <div className="col">
-          {isInvalid && <InlineAlert title="Invalid form" />}
+          {isInvalid && (
+            <InlineAlert
+              title="Invalid form submission. Please check the fields highlighted below."
+              description="This inline alert is shown when the form fails to validate. It is dismissed if the user resets the form."
+              variant="warning"
+            />
+          )}
           <Text>
             These input fields are wrapped in a <code>{"<Form>"}</code>{" "}
             component, which groups them for the purposes of data validation and

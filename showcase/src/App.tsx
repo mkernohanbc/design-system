@@ -49,6 +49,19 @@ function App() {
           <h2>Components</h2>
         </div>
         <div className="row">
+          <div className="col">
+            <h3>TKTK</h3>
+            <Text>TKTKTKTKTKTKTK</Text>
+          </div>
+          <div className="col">
+            <h3>TKTK</h3>
+            <Text>TKTKTKTKTKTKTK</Text>
+          </div>
+        </div>
+        <div className="row">
+          <h2>Components</h2>
+        </div>
+        <div className="row">
           <h3>Inline alert</h3>
         </div>
         <div className="row">
@@ -61,18 +74,22 @@ function App() {
           <CalloutWithVariants />
         </div>
         <div className="row">
-          <div className="col">
-            <ButtonWithVariants />
-          </div>
-          <div className="col">
-            <Dialogs />
-          </div>
+          <h3>Buttons</h3>
+        </div>
+        <div className="row">
+          <ButtonWithVariants />
+        </div>
+        <div className="row">
+          <h3>Dialogs</h3>
+        </div>
+        <div className="row">
+          <Dialogs />
         </div>
         <div className="row">
           <div className="col">
             <h3>Form</h3>
             <InlineAlert
-              variant="warning"
+              variant="info"
               title="This is a dummy form"
               description="Pressing 'submit' will show a browser alert and trigger HTML validation, but no data is stored or submitted."
             />

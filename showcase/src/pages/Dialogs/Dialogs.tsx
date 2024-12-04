@@ -18,8 +18,8 @@ const Dialogs = () => {
     useState<DialogVariant>("alert");
 
   return (
-    <div className="col component">
-      <div className="col">
+    <div className="row component">
+      <div className="col" style={{ width: "40%" }}>
         <Select
           label="Pick a dialog type"
           description="Controls button and dialog components via useState"
@@ -34,7 +34,7 @@ const Dialogs = () => {
           ]}
         />
       </div>
-      <div className="col">
+      <div className="row">
         <DialogTrigger>
           {selectedVariant === "alert" ? (
             <Button>Open an alert dialog</Button>
