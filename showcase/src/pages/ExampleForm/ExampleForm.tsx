@@ -30,6 +30,13 @@ const ExampleForm = () => {
     >
       <div className="row">
         <div className="col">
+          {!isInvalid && (
+            <InlineAlert
+              variant="info"
+              title="This is a dummy form"
+              description="Pressing 'submit' will show a browser alert and trigger HTML validation, but no data is stored or submitted."
+            />
+          )}
           {isInvalid && (
             <InlineAlert
               title="Invalid form submission. Please check the fields highlighted below."

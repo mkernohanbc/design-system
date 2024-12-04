@@ -6,7 +6,6 @@ import {
   Header,
   Footer,
   FooterLinks,
-  InlineAlert,
 } from "@bcgov/design-system-react-components";
 
 // import path for components not yet released
@@ -145,11 +144,6 @@ function App() {
                 validation and submission support.
               </InfoButton>
             </div>
-            <InlineAlert
-              variant="info"
-              title="This is a dummy form"
-              description="Pressing 'submit' will show a browser alert and trigger HTML validation, but no data is stored or submitted."
-            />
             <ExampleForm />
           </div>
         </div>
