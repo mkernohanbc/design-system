@@ -79,6 +79,11 @@ function App() {
                   Get the Figma library
                 </a>
               </li>
+              <li>
+                <a href="mailto:designsystem@gov.bc.ca">
+                  Contact the B.C. Design System team
+                </a>
+              </li>
             </ul>
           </div>
         </div>
