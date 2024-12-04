@@ -3,19 +3,10 @@ import "@bcgov/bc-sans/css/BC_Sans.css";
 import "@bcgov/design-tokens/css/variables.css";
 
 import {
-  Button,
-  ButtonGroup,
-  Checkbox,
-  CheckboxGroup,
   Header,
   Footer,
   FooterLinks,
-  Form,
   InlineAlert,
-  Radio,
-  RadioGroup,
-  TextField,
-  TextArea,
 } from "@bcgov/design-system-react-components";
 
 // import path for components not yet released
@@ -27,13 +18,13 @@ import {
   ButtonWithVariants,
   CalloutWithVariants,
   Dialogs,
+  ExampleForm,
   InfoButton,
   InlineAlertWithVariants,
   IntroAlert,
 } from "./pages";
 
 import { Link, Text } from "react-aria-components";
-import { Container, Row, Col } from "react-grid-system";
 
 function App() {
   return (
@@ -49,147 +40,45 @@ function App() {
         </InfoButton>
       </Header>
       <main>
-        <Container>
-          <Row>
-            <Col>
-              <IntroAlert />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Row>
-                <h2>Components</h2>
-              </Row>
-              <Row>
-                <h3>Inline alert</h3>
-              </Row>
-              <InlineAlertWithVariants />
-              <Row>
-                <h3>Callout</h3>
-              </Row>
-              <CalloutWithVariants />
-            </Col>
-          </Row>
-          <Row direction="row" gutterWidth={72}>
-            <Col>
-              <Row align="center">
-                <Col sm={3}>
-                  <h3>Buttons</h3>
-                </Col>
-                <Col sm={3}>
-                  <InfoButton popoverPlacement="right">
-                    The{" "}
-                    <Link href="https://www2.gov.bc.ca/gov/content?id=4C51732F99054326A3E2DB0B82576DD4">
-                      Button
-                    </Link>{" "}
-                    component enables the user to easily identify and take an
-                    action.
-                  </InfoButton>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <ButtonWithVariants />
-                </Col>
-              </Row>
-            </Col>
-            <Col>
-              <h3>Dialogs</h3>
-              <InfoButton popoverPlacement="left">
-                <Link href="https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C">
-                  Dialogs
-                </Link>{" "}
-                display important information or actions to the user, overlaid
-                over the rest of the interface.
-              </InfoButton>
-              <Dialogs />
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={6}></Col>
-            <Col sm={6}>
-              <h3>Form</h3>
-              <Form className="form">
-                <InlineAlert
-                  variant="warning"
-                  title="This is a dummy form"
-                  description="Pressing 'submit' will show a browser alert and trigger HTML validation, but no data is stored or submitted."
-                />
-                <Text>
-                  These input fields are wrapped in a <code>{"<Form>"}</code>{" "}
-                  component, which groups them for the purposes of data
-                  validation and submission.
-                </Text>
-                <div className="fieldset">
-                  <TextField
-                    label="Name"
-                    isRequired
-                    description="Required inputs automatically show a 'required' indicator."
-                  />
-                  <TextField
-                    label="Email address"
-                    type="email"
-                    description="A TextField supports standard HTML form validation."
-                  />
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <div style={{ alignSelf: "flex-start" }}>
-                    <CheckboxGroup
-                      label="Checkbox group"
-                      description="A checkbox group allows multiple selections."
-                    >
-                      <Checkbox value="1">Item 1</Checkbox>
-                      <Checkbox value="2">Item 2</Checkbox>
-                      <Checkbox value="3">Item 3</Checkbox>
-                      <Checkbox value="4">Item 4</Checkbox>
-                    </CheckboxGroup>
-                  </div>
-                  <div style={{ alignSelf: "flex-end" }}>
-                    <RadioGroup
-                      label="Radio group"
-                      description="A radio group allows only one selection."
-                      isRequired
-                      defaultValue="1"
-                    >
-                      <Radio value="1">Item 1</Radio>
-                      <Radio value="2">Item 2</Radio>
-                      <Radio value="3">Item 3</Radio>
-                      <Radio value="4">Item 4</Radio>
-                    </RadioGroup>
-                  </div>
-                </div>
-
-                <TextArea
-                  label="Write a long message (but not too long)"
-                  description="If you set a maximum length, a character counter is shown."
-                  maxLength={100}
-                />
-                <ButtonGroup orientation="horizontal">
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    onPress={() =>
-                      alert(
-                        "In a real form, this onPress() event would do something. But this is not a real form, so it doesn't do anything except trigger standard HTML form validation."
-                      )
-                    }
-                  >
-                    Submit
-                  </Button>
-                  <Button variant="secondary" type="reset">
-                    Reset
-                  </Button>
-                </ButtonGroup>
-              </Form>
-            </Col>
-          </Row>
-        </Container>
+        <div className="row">
+          <div className="col">
+            <IntroAlert />
+          </div>
+        </div>
+        <div className="row">
+          <h2>Components</h2>
+        </div>
+        <div className="row">
+          <h3>Inline alert</h3>
+        </div>
+        <div className="row">
+          <InlineAlertWithVariants />
+        </div>
+        <div className="row">
+          <h3>Callout</h3>
+        </div>
+        <div className="row">
+          <CalloutWithVariants />
+        </div>
+        <div className="row">
+          <div className="col">
+            <ButtonWithVariants />
+          </div>
+          <div className="col">
+            <Dialogs />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <h3>Form</h3>
+            <InlineAlert
+              variant="warning"
+              title="This is a dummy form"
+              description="Pressing 'submit' will show a browser alert and trigger HTML validation, but no data is stored or submitted."
+            />
+            <ExampleForm />
+          </div>
+        </div>
       </main>
       <Footer
         contact={

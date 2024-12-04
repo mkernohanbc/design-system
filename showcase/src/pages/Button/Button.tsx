@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Key } from "react-aria-components";
-import { Row, Col } from "react-grid-system";
 
 import { Button, Select, Switch } from "@bcgov/design-system-react-components";
 
@@ -15,9 +14,9 @@ const ButtonWithVariants = () => {
   const [isButtonEnabled, setIsButtonEnabled] = useState<boolean>(true);
 
   return (
-    <>
-      <Row className="component">
-        <Col>
+    <div className="col component">
+      <div className="row">
+        <div className="col">
           <Select
             selectedKey={selectedVariant}
             onSelectionChange={(key: Key) =>
@@ -39,8 +38,8 @@ const ButtonWithVariants = () => {
           >
             Enable/disable the button
           </Switch>
-        </Col>
-        <Col>
+        </div>
+        <div className="col">
           <Button
             variant={selectedVariant}
             isDisabled={!isButtonEnabled}
@@ -50,9 +49,9 @@ const ButtonWithVariants = () => {
           >
             This is a button
           </Button>
-        </Col>
-      </Row>
-    </>
+        </div>
+      </div>
+    </div>
   );
 };
 

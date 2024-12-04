@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Key } from "react-aria-components";
-import { Row, Col } from "react-grid-system";
 
 import { InlineAlert, Select } from "@bcgov/design-system-react-components";
 
@@ -23,41 +22,36 @@ const InlineAlertWithVariants = () => {
     useState<InlineAlertVariant>("success");
 
   return (
-    <>
-      <Row
-        className="component"
-        style={{ display: "flex", alignItems: "center" }}
-      >
-        <Col>
-          <Select
-            selectedKey={selectedVariant}
-            onSelectionChange={(key: Key) =>
-              setSelectedVariant(key as InlineAlertVariant)
-            }
-            size="small"
-            label="Pick a variant"
-            description="Controls inline alert via useState"
-            items={[
-              { id: "info", label: "Info theme" },
-              { id: "success", label: "Success theme" },
-              { id: "warning", label: "Warning theme" },
-              { id: "danger", label: "Danger theme" },
-            ]}
+    <div className="row component">
+      <div className="col">
+        <Select
+          selectedKey={selectedVariant}
+          onSelectionChange={(key: Key) =>
+            setSelectedVariant(key as InlineAlertVariant)
+          }
+          size="small"
+          label="Pick a variant"
+          description="Controls inline alert via useState"
+          items={[
+            { id: "info", label: "Info theme" },
+            { id: "success", label: "Success theme" },
+            { id: "warning", label: "Warning theme" },
+            { id: "danger", label: "Danger theme" },
+          ]}
+        />
+      </div>
+      {alert.alert1 && (
+        <div className="col">
+          <InlineAlert
+            variant={selectedVariant}
+            title="Inline alert component"
+            description="Use the dropdown menu to toggle between available themes."
+            isCloseable
+            onClose={() => handleClose("alert1")}
           />
-        </Col>
-        <Col>
-          {alert.alert1 && (
-            <InlineAlert
-              variant={selectedVariant}
-              title="Inline alert component"
-              description="Use the dropdown menu to toggle between available themes."
-              isCloseable
-              onClose={() => handleClose("alert1")}
-            />
-          )}
-        </Col>
-      </Row>
-    </>
+        </div>
+      )}
+    </div>
   );
 };
 

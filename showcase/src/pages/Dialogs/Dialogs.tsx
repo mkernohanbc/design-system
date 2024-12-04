@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Key, Text } from "react-aria-components";
-import { Row, Col } from "react-grid-system";
 
 import {
   Button,
@@ -19,8 +18,8 @@ const Dialogs = () => {
     useState<DialogVariant>("alert");
 
   return (
-    <Row className="component">
-      <Col>
+    <div className="col component">
+      <div className="col">
         <Select
           label="Pick a dialog type"
           description="Controls button and dialog components via useState"
@@ -34,8 +33,8 @@ const Dialogs = () => {
             { id: "generic", label: "Dialog" },
           ]}
         />
-      </Col>
-      <Col>
+      </div>
+      <div className="col">
         <DialogTrigger>
           {selectedVariant === "alert" ? (
             <Button>Open an alert dialog</Button>
@@ -60,8 +59,8 @@ const Dialogs = () => {
             )}
           </Modal>
         </DialogTrigger>
-      </Col>
-    </Row>
+      </div>
+    </div>
   );
 };
 

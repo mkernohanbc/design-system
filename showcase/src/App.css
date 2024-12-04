@@ -20,17 +20,44 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-large);
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: var(--layout-padding-xlarge) var(--layout-padding-none);
+  @media (max-width: 768px) {
+    margin: var(--layout-margin-none) var(--layout-margin-medium);
+  }
 }
 
 /* Layout */
-.component {
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-margin-medium);
+  flex: auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  min-width: 300px;
+}
+
+.row {
   display: flex;
   flex-direction: row;
+  gap: var(--layout-margin-large);
+  flex: auto;
+  flex-wrap: wrap;
   box-sizing: border-box;
+}
+
+/* Component styles */
+
+.component {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
   background-color: var(--surface-color-background-white);
   padding: var(--layout-padding-medium);
   border: var(--layout-border-width-small) solid
@@ -49,12 +76,6 @@ main {
   border-radius: var(--layout-border-radius-medium);
 }
 
-.form .fieldset {
-  display: flex;
-  flex-direction: row;
-  gap: var(--layout-margin-small);
-}
-
 .dialog {
   display: flex;
   flex-direction: column;
@@ -70,6 +91,7 @@ h4,
 h5,
 h6 {
   color: var(--typography-color-primary);
+  margin: 0;
 }
 
 h1 {
