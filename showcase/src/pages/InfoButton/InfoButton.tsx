@@ -28,7 +28,7 @@ export default function InfoButton({
   const triggerRef = useRef(null);
   return (
     <React.Fragment {...props}>
-      <TooltipTrigger delay={0}>
+      <TooltipTrigger delay={500}>
         <Button
           isIconButton
           size="small"

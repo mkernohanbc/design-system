@@ -37,7 +37,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--layout-margin-medium);
-  flex: auto;
+  flex: 1;
   flex-wrap: wrap;
   box-sizing: border-box;
   min-width: 300px;
@@ -46,10 +46,16 @@ main {
 .row {
   display: flex;
   flex-direction: row;
-  gap: var(--layout-margin-large);
+  gap: var(--layout-margin-medium);
   flex: auto;
   flex-wrap: wrap;
+  align-items: stretch;
   box-sizing: border-box;
+}
+
+/* Inline button alignment */
+.row > button {
+  align-self: center;
 }
 
 /* Component styles */
@@ -166,7 +172,7 @@ h6.invert {
 
 /* Popovers */
 .popover {
-  font: var(--typography-regular-small-body);
+  font: var(--typography-regular-body);
   color: var(--typography-color-secondary);
   a {
     color: var(--typography-color-link);

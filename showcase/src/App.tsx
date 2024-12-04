@@ -50,44 +50,107 @@ function App() {
         </div>
         <div className="row">
           <div className="col">
-            <h3>TKTK</h3>
-            <Text>TKTKTKTKTKTKTK</Text>
+            <h3>Introduction</h3>
+            <Text>
+              The{" "}
+              <Link href="https://gov.bc.ca/designsystem">
+                B.C. Design System
+              </Link>{" "}
+              gives public sector teams a set of building blocks to build
+              consistent, accessible user interfaces. This app illustrates how
+              design system components look and behave, both in isolation and
+              when composed together to form more complex design and interaction
+              patterns.
+            </Text>
           </div>
           <div className="col">
-            <h3>TKTK</h3>
-            <Text>TKTKTKTKTKTKTK</Text>
+            <h3>Explore the design system</h3>
+            <ul>
+              <li>
+                <Link href="https://gov.bc.ca/designsystem">
+                  Docs and guidance
+                </Link>
+              </li>
+              <li>
+                <Link href="https://designsystem.gov.bc.ca/react-components">
+                  Browse components in Storybook
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.npmjs.com/package/@bcgov/design-system-react-components">
+                  Install the npm package
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.figma.com/community/file/1326994583954765832/b-c-design-system">
+                  Get the Figma library
+                </Link>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div className="row">
-          <h2>Components</h2>
         </div>
         <div className="row">
           <h3>Inline alert</h3>
+          <InfoButton popoverPlacement="right">
+            <Link href="https://www2.gov.bc.ca/gov/content?id=B2B838CAA1EE4552941925894286258F">
+              Inline alerts
+            </Link>{" "}
+            display an important contextual notification or message to the user.
+          </InfoButton>
         </div>
         <div className="row">
           <InlineAlertWithVariants />
         </div>
         <div className="row">
           <h3>Callout</h3>
+          <InfoButton popoverPlacement="right">
+            <Link href="https://www2.gov.bc.ca/gov/content?id=84AA0EAD468F41149F125E63F91A402F">
+              Callouts
+            </Link>{" "}
+            highlight important sections of static content.
+          </InfoButton>
         </div>
         <div className="row">
           <CalloutWithVariants />
         </div>
         <div className="row">
           <h3>Buttons</h3>
+          <InfoButton popoverPlacement="right">
+            <Link href="https://www2.gov.bc.ca/gov/content?id=4C51732F99054326A3E2DB0B82576DD4">
+              Buttons
+            </Link>{" "}
+            enable the user to easily identify and take an action.
+          </InfoButton>
         </div>
         <div className="row">
           <ButtonWithVariants />
         </div>
         <div className="row">
           <h3>Dialogs</h3>
+          <InfoButton popoverPlacement="right">
+            <Link href="https://www2.gov.bc.ca/gov/content?id=6A0A247719CA42DDB9B8BAD47D46F69C">
+              Dialogs
+            </Link>{" "}
+            provide important information in an overlay over the rest of the
+            interface.
+          </InfoButton>
         </div>
         <div className="row">
           <Dialogs />
         </div>
         <div className="row">
           <div className="col">
-            <h3>Form</h3>
+            <div className="row">
+              <h3>Form</h3>
+              <InfoButton popoverPlacement="right">
+                The{" "}
+                <Link href="https://designsystem.gov.bc.ca/react-components/?path=/docs/utility-form-wrapper--docs">
+                  Form
+                </Link>{" "}
+                component wraps around input components to provide data
+                validation and submission support.
+              </InfoButton>
+            </div>
             <InlineAlert
               variant="info"
               title="This is a dummy form"

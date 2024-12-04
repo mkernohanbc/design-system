@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { InlineAlert, Switch } from "@bcgov/design-system-react-components";
-import { Link, Text } from "react-aria-components";
+import { Text } from "react-aria-components";
 
 const IntroAlert = () => {
   const [isAlertVisible, setIsAlertVisible] = useState(true);
@@ -29,11 +29,6 @@ const IntroAlert = () => {
                 frameworks are used.
               </Text>
             </InlineAlert>
-            <Text className="large">
-              The <Link href="https://gov.bc.ca">B.C. Design System</Link> gives
-              public sector teams a set of building blocks to build consistent,
-              accessible user interfaces.
-            </Text>
           </div>
         </>
       )}
