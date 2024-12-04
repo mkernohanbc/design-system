@@ -54,6 +54,7 @@ const ExampleForm = () => {
             label="Email address"
             type="email"
             description="A TextField supports standard HTML form validation."
+            isRequired
           />
         </div>
       </div>
@@ -73,8 +74,6 @@ const ExampleForm = () => {
           <RadioGroup
             label="Radio group"
             description="A radio group allows only one selection."
-            isRequired
-            defaultValue="1"
           >
             <Radio value="1">Item 1</Radio>
             <Radio value="2">Item 2</Radio>
