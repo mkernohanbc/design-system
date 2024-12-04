@@ -13,6 +13,9 @@ import {
 } from "@bcgov/design-system-react-components";
 import { Text } from "react-aria-components";
 
+// importing unpublished component
+import { Callout } from "../../../../packages/react-components/src/components";
+
 const ExampleForm = () => {
   const [isInvalid, SetInvalid] = useState(false);
   return (
@@ -39,6 +42,12 @@ const ExampleForm = () => {
             component, which groups them for the purposes of data validation and
             submission.
           </Text>
+          <Callout
+            title="A note about forms"
+            description={
+              "The form component is useful for simple use-cases. For complex forms, we recommend using CHEFS or CMS Forms."
+            }
+          />
         </div>
       </div>
       <div className="row">
