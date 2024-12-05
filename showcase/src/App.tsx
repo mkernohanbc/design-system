@@ -3,6 +3,7 @@ import "@bcgov/bc-sans/css/BC_Sans.css";
 import "@bcgov/design-tokens/css/variables.css";
 
 import {
+  Button,
   Header,
   Footer,
   FooterLinks,
@@ -35,6 +36,15 @@ function App() {
           </a>{" "}
           component communicates authorship and provides navigation.
         </InfoButton>
+        <Button
+          variant="primary"
+          size="small"
+          onPress={() =>
+            alert("Button events are configured using this onPress() event")
+          }
+        >
+          Primary button
+        </Button>
       </Header>
       <main>
         <div className="row">
